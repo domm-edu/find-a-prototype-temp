@@ -70,7 +70,7 @@
       Learning style
     </dt>
     <dd class="govuk-summary-list__value">
-      {{ data['learning-style'] }}
+      {{ data['learning-style'] or "No learning style added" }}
     </dd>
     <dd class="govuk-summary-list__actions">
       <a class="govuk-link" href="learning-method">Change<span class="govuk-visually-hidden"> address</span></a>
@@ -81,7 +81,7 @@
       Apprenticeships and courses
     </dt>
     <dd class="govuk-summary-list__value">
-      {{ data['apprenticeship-or-course'] }}
+      {{ data['apprenticeship-or-course'] or "No apprenticeships or courses added"}}
     </dd>
     <dd class="govuk-summary-list__actions">
       <a class="govuk-link" href="apprenticeships-or-courses">Change<span class="govuk-visually-hidden"> address</span></a>
@@ -92,8 +92,7 @@
       Education
     </dt>
     <dd class="govuk-summary-list__value">
-      <p>{{ data['level-of-education'] }}</p> 
-      <p>{{ data['course-level'] }}</p>
+      <p>{{ data['level-of-education'] or "No education added"}}</p> 
     </dd>
     <dd class="govuk-summary-list__actions">
       <a class="govuk-link" href="level-of-education">Change<span class="govuk-visually-hidden"> address</span></a>
