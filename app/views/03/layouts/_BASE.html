@@ -50,7 +50,11 @@
             </span>
           </p>
         </div>
+        {% if back %}
+        <a href="javascript:history.back()" class="govuk-back-link" style="margin-bottom: 30px;">Back</a>
+        {% endif %}
       </div>
+      
       <div class="govuk-grid-column-two-thirds">
 
 
@@ -81,8 +85,6 @@
 
 
       </div>
-      <div class="govuk-grid-column-one-third">
-      </div>
     </div>
   </div>
 </section>
@@ -95,12 +97,6 @@
 
 {% endblock %}    
 
-{% block beforeContent %}
-
-{% if back %}
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
-{% endif %}
-{% endblock %}  
 
 {% block content %}
 <div class="govuk-grid-row"> 
