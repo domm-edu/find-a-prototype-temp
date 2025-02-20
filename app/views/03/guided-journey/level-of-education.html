@@ -1,0 +1,76 @@
+{% extends "../layouts/_QUESTION.html" %}
+
+{% set back = "true" %}
+{% set pageHeading = "Where would you like to study?" %}
+{% set withoutDescription = "true" %}
+
+
+{% block service %}
+<form action="check-answers" method="post" novalidate>
+  <h1 class="govuk-heading-l">About your education</h1>
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            What's the highest level of education you've completed?
+          </h2>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="level-of-education" name="level-of-education" type="radio" value="Secondary school (GCSEs)">
+            <label class="govuk-label govuk-radios__label" for="level-of-education">
+              Secondary school (GCSEs)
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="level-of-education-2" name="level-of-education" type="radio" value="College or sixth form (A Levels or T Level) or advanced apprenticeship">
+            <label class="govuk-label govuk-radios__label" for="level-of-education-2">
+              College or sixth form (A Levels or T Level) or advanced apprenticeship
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Are you looking for courses at the same level to this or the next level up?
+          </h2>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="course-level" name="course-level" type="radio" value="The same level as I don't feel ready yet to move up">
+            <label class="govuk-label govuk-radios__label" for="course-level">
+              The same level as I don't feel ready yet to move up
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="course-level-2" name="course-level" type="radio" value="I'm ready for the next level">
+            <label class="govuk-label govuk-radios__label" for="course-level-2">
+              I'm ready for the next level
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="course-level-2" name="course-level" type="radio" value="I'd like to see a mix of both levels">
+            <label class="govuk-label govuk-radios__label" for="course-level-2">
+              I'd like to see a mix of both levels
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    
+    <div class="govuk-button-group">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+      <a class="govuk-link" href="hobbies">Skip this step</a>
+    </div>
+
+  </div>
+</div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "../layouts/_QUESTION.html" %}
+
+{% set back = "true" %}
+{% set pageHeading = "Where would you like to study?" %}
+{% set withoutDescription = "true" %}
+
+
+{% block service %}
+<form action="location" method="post" novalidate>
+
+  <div data-module="moj-add-another">
+
+    <h2 class="govuk-heading-l moj-add-another__heading" tabindex="-1">Tell us about you and what things you're in to</h2>
+    <p>If you enjoy photography or video-making you've clearly got a creative side.</p> 
+    <p>If you play lots of sports then you might want to consider more physical courses.</p>
+  
+  
+    <form method="post">
+  
+      <fieldset class="govuk-fieldset moj-add-another__item">
+  
+        <legend class="govuk-fieldset__legend moj-add-another__title govuk-fieldset__legend--m">
+  
+          Hobby and interest
+  
+        </legend>
+  
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-!-font-weight-bold" for="person[0][first_name]">
+            Enter a hobby and interest
+          </label>
+  
+          <input class="govuk-input" id="person[0][first_name]" name="person[0][first_name]" type="text" data-name="person[%index%][first_name]" data-id="person[%index%][first_name]">
+
+        </div>
+  
+      </fieldset>
+  
+      <div class="moj-button-action">
+  
+        <button type="submit" class="govuk-button govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4" data-module="govuk-button">
+          Add another hobby and interest
+        </button>
+  
+      </div>
+
+    </form>
+  
+  </div>
+
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+
+    
+    <div class="govuk-button-group">
+      {{ govukButton({
+        text: "Continue",
+        href: "location"
+      }) }}
+      <a class="govuk-link" href="#">Skip this step</a>
+    </div>
+
+  </div>
+</div>
+</form>
+
+{% endblock %}

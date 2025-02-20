@@ -1,0 +1,87 @@
+{% extends "../layouts/_QUESTION.html" %}
+
+{% set back = "true" %}
+{% set pageHeading = "Where would you like to study?" %}
+{% set withoutDescription = "true" %}
+
+
+{% block service %}
+<form action="example-3" method="post" novalidate>
+    
+  <span class="govuk-caption-l">Course 2 of 3</span>
+  <h1 class="govuk-heading-l">Tell us if this course is useful for you</h1>
+
+  <p>We're going to show you some courses we think you might like.</p>
+
+  <div class="govuk-summary-card">
+    <div class="govuk-summary-card__title-wrapper">
+      <h2 class="govuk-summary-card__title">
+        <a href="horse-care.html">Example of a course</a>
+      </h2>
+    </div>
+    <div class="govuk-summary-card__content">
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Course type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <strong class="govuk-tag govuk-tag--purple">
+              Level 3 diploma
+            </strong>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Distance
+          </dt>
+          <dd class="govuk-summary-list__value">
+            20 miles (Wigan)
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Start date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            1 September 2025
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Duration
+          </dt>
+          <dd class="govuk-summary-list__value">
+            18 months
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Requirements
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No academic entry requirements but previous experience with horses required
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+
+
+    
+    <div class="govuk-button-group">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Show me more like this
+      </button>
+
+      <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Show me less like this
+      </button>
+      
+    </div>
+
+  </div>
+</div>
+</form>
+
+{% endblock %}

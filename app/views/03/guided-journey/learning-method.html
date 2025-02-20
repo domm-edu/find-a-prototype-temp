@@ -1,0 +1,70 @@
+{% extends "../layouts/_QUESTION.html" %}
+
+{% set back = "true" %}
+{% set pageHeading = "Where would you like to study?" %}
+{% set withoutDescription = "true" %}
+
+
+{% block service %}
+<form action="apprenticeships-or-courses" method="post" novalidate>
+<h1 class="govuk-heading-l">
+  What's your preferred learning style?
+</h1>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+            Do you prefer hands-on courses?
+          </h1>
+        </legend>
+        <div id="signIn-hint" class="govuk-hint">
+          For example, with work experience or study-based courses, which are likely to be more academic?
+        </div>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="learning-style" name="learning-style" type="radio" value="Strongly prefer hands-on">
+            <label class="govuk-label govuk-radios__label" for="learning-style">
+              Strongly prefer hands-on
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="learning-style-2" name="learning-style" type="radio" value="Slightly prefer hands-on">
+            <label class="govuk-label govuk-radios__label" for="learning-style-2">
+              Slightly prefer hands-on
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="learning-style-3" name="learning-style" type="radio" value="I like both">
+            <label class="govuk-label govuk-radios__label" for="learning-style-3">
+              I like both
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="learning-style-4" name="learning-style" type="radio" value="Slightly prefer study-based">
+            <label class="govuk-label govuk-radios__label" for="learning-style-4">
+              Slightly prefer study-based
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="learning-style-4" name="learning-style" type="radio" value="Strongly prefer study-based">
+            <label class="govuk-label govuk-radios__label" for="learning-style-4">
+              Strongly prefer study-based
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    
+    <div class="govuk-button-group">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+      <a class="govuk-link" href="apprenticeships-or-courses">Skip this step</a>
+    </div>
+
+  </div>
+</div>
+</form>
+
+{% endblock %}
