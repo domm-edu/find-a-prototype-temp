@@ -10,9 +10,16 @@
 
   <div data-module="moj-add-another">
 
-    <h2 class="govuk-heading-l">Tell us about you and what things you're in to</h2>
-    <p>If you enjoy photography or video-making you've clearly got a creative side.</p> 
-    <p>If you play lots of sports then you might want to consider more physical courses.</p>
+    <h2 class="govuk-heading-l">Tell us about yourself</h2>
+    <p>You can include:
+    </p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>school subjects (like art or biology)</li>
+      <li>things you'd like to get into (like construction or healthcare)</li>
+      <li>what you enjoy in your free time (like playing football, photography or gaming)</li>
+    </ul>
+    <p>The more you tell us about yourself, the better your search results are likely to be.</p>
+    <p>You can add anything from a single word (such as 'science') to a full sentence (like 'I really enjoy science GCSE, especially physics').</p>
   
   
     <form method="post">
@@ -21,13 +28,13 @@
   
         <legend class="govuk-fieldset__legend moj-add-another__title govuk-fieldset__legend--m">
   
-          Hobby and interest
+          What do you enjoy?
   
         </legend>
   
         <div class="govuk-form-group">
           <label class="govuk-label govuk-!-font-weight-bold" for="person[0][first_name]">
-            Enter a hobby and interest
+            Enter something you like or want to do
           </label>
   
           <input class="govuk-input" id="person[0][first_name]" name="person[0][first_name]" type="text" data-name="person[%index%][first_name]" data-id="person[%index%][first_name]">
@@ -39,7 +46,7 @@
       <div class="moj-button-action">
   
         <button type="submit" class="govuk-button govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4" data-module="govuk-button">
-          Add another hobby and interest
+          Add something else
         </button>
   
       </div>
