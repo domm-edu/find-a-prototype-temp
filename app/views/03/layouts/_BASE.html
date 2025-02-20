@@ -66,7 +66,19 @@
         </h2>
 
         <p class="govuk-body-m">{{ pageDescription }}</p>
+
         {% endif %}
+
+        {% if withDescriptionAndLink %}
+        <h2 class="govuk-heading-l">
+          {{ pageHeading }}
+        </h2>
+
+        <p class="govuk-body-m">{{ pageDescription }}</p>
+
+        <p class="govuk-body-m"><a href="interests">Search again</a></p>
+        {% endif %}
+
 
       </div>
       <div class="govuk-grid-column-one-third">
