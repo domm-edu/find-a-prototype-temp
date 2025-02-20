@@ -1,79 +1,130 @@
 {% extends "../layouts/_HOME.html" %}
 
+{% block header %}
 
+<header class="dfe-header" role="banner">
+  <div class="govuk-width-container dfe-header__container">
+     <div class="dfe-header__logo">
+        <a class="dfe-header__link" href="/" aria-label="DfE homepage">
+        <img src="/public/images/dfe-logo.png" class="dfe-logo" alt="Department for Education">
+        <img src="/public/images/dfe-logo-alt.png" class="dfe-logo-hover" alt="Department for Education">
+        </a>
+     </div>
+  </div>
+  <div class="govuk-width-container dfe-header__service-name" style="margin-bottom: 20px;">
+     <a href="/" class="dfe-header__link--service">Explore your options after school or college</a>
+  </div>
+
+  <div class="masthead" role="banner">
+   <div class="govuk-width-container dfe-header__container">
+   <div class="hero">
+     <div class="hero__content">
+     <div class="hero__body" id="index-hero-body">
+       <h1 class="hero__title" style="margin-bottom: 24px;">Explore your options after school or college</h1>
+ 
+       <p class="hero__description">
+         Find out about education and training opportunities in England if you're 15 to 18.
+       </p>
+      </div>
+     </div>
+   </div>
+ </div>
+
+</header>
+
+<section class="dfe-page-grey">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <div class="govuk-phase-banner" style="margin-top: -30px; margin-bottom: 20px;">
+          <p class="govuk-phase-banner__content">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+              Alpha
+            </strong>
+            <span class="govuk-phase-banner__text">
+              This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by
+                email</a>.
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+
+
+        <h2 class="govuk-heading-l">
+          What are you interested in?
+        </h2>
+    
+        <p>Let us help you find a course or apprenticeship that suits you.</p>
+        <p>We use AI to give you the best results for things near you.</p>
+    
+        {{ govukButton({
+          text: "Tell us what you're interested in",
+          href: "interests"
+        }) }}
+    
+        <h3 class="govuk-heading-m">
+          I don't know where to start
+        </h3>
+    
+        <p>If you're not sure yet about what to do, you can browse all courses and apprenticeships near you.</p>
+    
+        <p><a href="">Browse all courses</a></p>
+
+      </div>
+      <div class="govuk-grid-column-one-third">
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
 
 {% block content %}
 
+
+
 <div class="govuk-grid-row"> 
-  <div class="govuk-grid-column-two-thirds">  
-
-   
-
-
-<div class="moj-interruption-card" style="background-color: #EAF5FF;">
-  <div class="moj-interruption-card__content">
-    <h1 class="govuk-heading-l">
-      What are you interested in?
-    </h1>
-
-    <p>Let us help you find a course or apprenticeship that suits you.</p>
-    <p>We use AI to give you the best results for things near you.</p>
-
-    {{ govukButton({
-      text: "Tell us what you're interested in",
-      href: "interests"
-    }) }}
-
-    <h3 class="govuk-heading-m">
-      I don't know where to start
-    </h3>
-
-    <p>If you're not sure yet about what to do, you can browse all courses and apprenticeships near you.</p>
-
-    <p><a href="">Browse</a></p>
-
-  </div>
-</div>
-
+  <div class="govuk-grid-column-full">  
 
 
 <h2 class="govuk-heading-m">Before you get started</h2>
 
-<p class="govuk-body">It can be good to talk to someone. This could be a parent, carer, teacher or careers adviser.</p>
-<p class="govuk-body">You can also talk to the National Careers Service (NCS) for free on <a href="">0800 100 900</a> or by <a href="">webchat</a>.</p>
-<p class="govuk-body">It's really common to feel a bit anxious about your next steps. Find out about <a href="">mental health support for young people</a>.</p>
-<p class="govuk-body">We have lots of <a href="">short videos of young people talking about their experiences</a>. Here are a few you might find useful.</p>
 
-
-<h3 class="govuk-heading-s">What can I do after GCSEs?</h3>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/D1ZkDA_swNc?si=vMrrEgDujJANTV1e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<p class="govuk-body">2 minutes 1 second</p>
-{{ govukDetails({
-  summaryText: "View transcript",
-  text: "transcript goes here."
-}) }}
-
-<h3 class="govuk-heading-s">What's an apprenticeship'?</h3>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MifweBgu8KU?si=DQh6NJsFxMWFfCln" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<p class="govuk-body">1 minute 50 seconds</p>
-{{ govukDetails({
-  summaryText: "View transcript",
-  text: "transcript goes here."
-}) }}
-
-<h3 class="govuk-heading-s">What are vocational courses like T Levels?</h3>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-4dm9KskMbY?si=yR0jz1Dj-Yreaclj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<p class="govuk-body">2 minutes 7 seconds</p>
-{{ govukDetails({
-  summaryText: "View transcript",
-  text: "transcript goes here."
-}) }}
+<div class="dfe-grid-container">
+  <div class="dfe-card">
+    <img src="/public/images/stock-image-1.jpg" alt="Sample Image">
+      <div class="dfe-card-container">
+        <h3 class="govuk-heading-m">
+            <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">What are the different types of courses?</a>
+        </h3>
+        <p>Not sure what what a T Level is? Confused by a Level 3 diploma? Let us explain.</p>
+      </div>
+  </div>
+  <div class="dfe-card">
+    <img src="/public/images/stock-image-2.jpg" alt="Sample Image">
+      <div class="dfe-card-container">
+        <h3 class="govuk-heading-m">
+            <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Videos about courses and apprenticeships</a>
+        </h3>
+        <p>We've chosen the most useful videos to help you make the best decision.</p>
+      </div>
+  </div>
+  <div class="dfe-card">
+    <img src="/public/images/stock-image-3.jpg" alt="Sample Image">
+    <div class="dfe-card-container">
+      <h3 class="govuk-heading-m">
+          <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Other useful places to go for careers advice</a>
+      </h3>
+      <p>There are lots of great places to find useful information about what you can do next.</p>
+    </div>
+</div>
+</div>
 </div>
 </div>
 
