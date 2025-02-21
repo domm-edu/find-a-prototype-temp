@@ -1,6 +1,6 @@
 {% extends "../../layouts/_BASE.html" %}
 
-{% set withDescription = "true" %}
+{% set withDescriptionAndLink = "true" %}
 {% set pageHeading = "Find a course results" %}
 {% set pageDescription = "Find courses based on the subject and location you showed interested in." %}
 
@@ -9,31 +9,26 @@
 <div class="govuk-grid-row"> 
   <div class="govuk-grid-column-two-thirds">  
 
-    <div class="govuk-inset-text" style="margin-top: 0px;">
-      It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
-    </div>
+    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Important
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          We haven't found many courses based on what you've told us.
+        </p>
+        <p class="govuk-body">Try <a class="govuk-notification-banner__link" href="../location">expanding your search area</a> to get more results.</p>
+        </div>
+      </div>
 
 
-    <p class="govuk-body govuk-!-margin-bottom-6">
-      <span class="govuk-!-font-weight-bold">Sort courses by:</span> 
-    <span class="govuk-!-margin-left-1 govuk-!-margin-right-1">
-      
-    <span class="">Relevance</span>
-    </span>    
-     | 
-    <span class="govuk-!-margin-left-2 govuk-!-margin-right-1">
-        <a href="/records?sortOrder=lastName" class="govuk-link govuk-link--no-visited-state">Distance</a>
-    </span>
-    | 
-    <span class="govuk-!-margin-left-2 govuk-!-margin-right-1">
-        <a href="/records?sortOrder=lastName" class="govuk-link govuk-link--no-visited-state">Start date</a>
-    </span>
-    </p>
 
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title">
-          <a href="course-example">Work based horse care and management</a> 
+          <a href="course-example" style="margin-right: 10px;">Work based horse care and management</a>
         </h2>
       </div>
       <div class="govuk-summary-card__content">
@@ -43,7 +38,7 @@
               Requirements
             </dt>
             <dd class="govuk-summary-list__value">
-              No requirements added
+              No academic entry requirements but previous experience with horses required
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -51,15 +46,28 @@
               Distance
             </dt>
             <dd class="govuk-summary-list__value">
-              No distance added
+              20 miles (Wigan)
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Course type
+              Diploma type
             </dt>
             <dd class="govuk-summary-list__value">
-                No course type added
+              <strong class="govuk-tag govuk-tag--purple" style="margin-bottom: 10px;">
+                Level 3 Diploma
+              </strong>
+
+                <details class="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      What is a Level 3 Diploma?
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    Content about a diploma
+                  </div>
+                </details>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -67,7 +75,7 @@
               Start date
             </dt>
             <dd class="govuk-summary-list__value">
-              No start date added
+              1 September 2025
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -75,20 +83,13 @@
               Duration
             </dt>
             <dd class="govuk-summary-list__value">
-              No duration added
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Relevance
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Unknown
+              18 months
             </dd>
           </div>
         </dl>
       </div>
     </div>
+
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title">
@@ -118,9 +119,19 @@
               Course type
             </dt>
             <dd class="govuk-summary-list__value">
-              <strong class="govuk-tag govuk-tag--blue" style="width: 100%;">
+              <strong class="govuk-tag govuk-tag--blue" style="margin-bottom: 10px;">
                 Level 3 apprenticeship
               </strong>
+              <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    What is a Level 3 Apprenticeship?
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  Content about an Apprenticeship
+                </div>
+              </details>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -153,14 +164,6 @@
             </dt>
             <dd class="govuk-summary-list__value">
               Flexible
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Relevance
-            </dt>
-            <dd class="govuk-summary-list__value">
-              90%
             </dd>
           </div>
         </dl>
