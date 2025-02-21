@@ -62,7 +62,6 @@
         </dt>
         <dd class="govuk-summary-list__value">
           <p class="govuk-body">Full time</p>
-          <p class="govuk-body"><a href="">What does this mean?</a></p>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -116,24 +115,10 @@
     
       {{ govukButton({
         text: "Don't show me courses like this",
-        classes: "govuk-button--secondary"
+        classes: "govuk-button--secondary",
+        href: "dont-show-courses-like-this"
       }) }}
     </div>
 
-    <h2 class="govuk-heading-m">Other courses</h2>
-    <p class="govuk-body">Before deciding whether to apply for this course, here are a few other courses in related subjects you might also want to consider.</p>
-    <ul class="govuk-list">
-      <li>
-        <a class="govuk-link" href="#">Sociology Level 2</a>
-      </li>
-      <li>
-        <a class="govuk-link" href="#">Biology A Level</a>
-      </li>
-      <li>
-        <a class="govuk-link" href="#">Health and Social Care T Level</a>
-      </li>
-      <li>
-        <a class="govuk-link" href="#">Horse Care and Animal Care</a>
-      </li>
-    </ul>
+  
 {% endblock %}
