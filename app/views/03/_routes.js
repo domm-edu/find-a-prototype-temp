@@ -40,7 +40,7 @@ router.post('/results-type1', function(request, response) {
         response.redirect("/03/guided-journey/bad-search-results/search-results-no-results")
     }
     else {
-        response.redirect("/03/guided-journey/bad-search-results/search-results")
+        response.redirect("/03/guided-journey/search-results")
     }
 })
 
