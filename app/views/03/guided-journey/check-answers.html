@@ -6,7 +6,7 @@
 
 
 {% block service %}
-<form action="example-1" method="post" novalidate>
+<form action="../results-type1" method="post" novalidate>
 <h1 class="govuk-heading-l">What you've told us</h1>
 <p>Check your answers, and change them if you'd like to, before viewing your search results.</p>
 
@@ -16,7 +16,7 @@
       Interests
     </dt>
     <dd class="govuk-summary-list__value">
-      {{ data['person[0][first_name]'] }}
+      {{ data['person'] }}
     </dd>
     <dd class="govuk-summary-list__actions">
       <a class="govuk-link" href="interests">Change<span class="govuk-visually-hidden"> name</span></a>

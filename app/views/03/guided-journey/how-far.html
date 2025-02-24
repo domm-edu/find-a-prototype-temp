@@ -7,6 +7,16 @@
 
 {% block service %}
 <form action="learning-method" method="post" novalidate>
+
+  <h1 class="govuk-heading-l">
+    How far would you be happy to travel?
+  </h1>
+
+  <div class="govuk-form-group">
+
+    <input class="govuk-input govuk-input--width-3" id="width-3" name="width3" type="text">
+  </div>
+
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -15,6 +25,18 @@
           </h1>
         </legend>
         <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="travel-location" name="travel-location" type="radio" value="Up to 1 miles">
+            <label class="govuk-label govuk-radios__label" for="travel-location">
+              Up to 1 mile
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="travel-location" name="travel-location" type="radio" value="Up to 2 miles">
+            <label class="govuk-label govuk-radios__label" for="travel-location">
+              Up to 2 miles
+            </label>
+          </div>
           <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="travel-location" name="travel-location" type="radio" value="Up to 5 miles">
             <label class="govuk-label govuk-radios__label" for="travel-location">

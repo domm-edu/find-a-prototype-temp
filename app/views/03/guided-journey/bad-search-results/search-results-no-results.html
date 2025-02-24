@@ -90,14 +90,18 @@
       </div>
     </div>
 
+    <h3 class="govuk-heading-m">If this course looks good, let us find more like it</h3>
+
+    {{ govukButton({
+      text: "Try and find more like this",
+      href: "../interests"
+    }) }}
+
     <h3 class="govuk-heading-m">We can help you find a course or apprenticeship but we need some more information</h3>
 
     <p>By giving us more information about the things you like, we can try and match you up to a wider variety of courses and apprenticeships.</p>
 
-    {{ govukButton({
-      text: "Search again",
-      href: "../interests"
-    }) }}
+    <p><a href="">Search again</a></p>
 
     <h3 class="govuk-heading-m">Try looking at courses and apprenticeships in other areas</h3>
 

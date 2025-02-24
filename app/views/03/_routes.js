@@ -18,4 +18,30 @@ router.post('/subject-answer', function(request, response) {
     }
 });
 
+  router.post('/results-type', function(request, response) {
+
+    var publishDate = request.session.data['person']
+    if (publishDate == "Science"){
+        response.redirect("guided-journey/bad-search-results/search-results-few-results")
+    } else if (publishDate == "Football"){
+        response.redirect("guided-journey/bad-search-results/search-results-no-results")
+    }
+    else {
+        response.redirect("index")
+    }
+})
+
+router.post('/results-type1', function(request, response) {
+
+    var publishDate = request.session.data['person']
+    if (publishDate == "Science"){
+        response.redirect("/03/guided-journey/bad-search-results/search-results-few-results")
+    } else if (publishDate == "Football"){
+        response.redirect("/03/guided-journey/bad-search-results/search-results-no-results")
+    }
+    else {
+        response.redirect("/03/guided-journey/bad-search-results/search-results")
+    }
+})
+
 module.exports = router
