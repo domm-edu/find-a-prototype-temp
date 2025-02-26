@@ -38,8 +38,8 @@ router.post('/results-type1', function(request, response) {
         response.redirect("/03/guided-journey/search-results-social-care")
     } else if (publishDate == "Football"){
         response.redirect("/03/guided-journey/bad-search-results/search-results-no-results")
-    } else if (publishDate == "Psychology"){
-        response.redirect("/03/guided-journey/search-results-psychology")
+    } else if (publishDate == "Sociology"){
+        response.redirect("/03/guided-journey/search-results-sociology")
     } else {
         response.redirect("/03/guided-journey/search-results-few-results")
     }
