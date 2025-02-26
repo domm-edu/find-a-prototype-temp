@@ -34,12 +34,13 @@ router.post('/subject-answer', function(request, response) {
 router.post('/results-type1', function(request, response) {
 
     var publishDate = request.session.data['person']
-    if (publishDate == "Science"){
-        response.redirect("/03/guided-journey/search-results")
+    if (publishDate == "Social care"){
+        response.redirect("/03/guided-journey/search-results-social-care")
     } else if (publishDate == "Football"){
         response.redirect("/03/guided-journey/bad-search-results/search-results-no-results")
-    }
-    else {
+    } else if (publishDate == "Psychology"){
+        response.redirect("/03/guided-journey/search-results-psychology")
+    } else {
         response.redirect("/03/guided-journey/search-results-few-results")
     }
 })
