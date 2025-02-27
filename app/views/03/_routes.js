@@ -36,12 +36,37 @@ router.post('/results-type1', function(request, response) {
     var publishDate = request.session.data['person']
     if (publishDate == "Social care"){
         response.redirect("/03/guided-journey/search-results-social-care")
-    } else if (publishDate == "Football"){
+    } 
+    else if (publishDate == "social care"){
+        response.redirect("/03/guided-journey/search-results-social-care")
+    } 
+    else if (publishDate == "Football"){
         response.redirect("/03/guided-journey/bad-search-results/search-results-no-results")
-    } else if (publishDate == "Sociology"){
+    }
+    else if (publishDate == "Sociology"){
         response.redirect("/03/guided-journey/search-results-sociology")
-    } else {
+    } 
+    else if (publishDate == "sociology"){
+        response.redirect("/03/guided-journey/search-results-sociology")
+    } 
+    else {
         response.redirect("/03/guided-journey/search-results-few-results")
+    }
+})
+
+router.post('/psychology-skip', function(request, response) {
+
+    var noResults = request.session.data['person']
+    if (noResults == "Sociology"){
+        response.redirect("/03/guided-journey/check-answers")
+    } 
+    
+    else if (noResults == "sociology"){
+        response.redirect("/03/guided-journey/check-answers")
+    }
+    
+    else {
+        response.redirect("/03/guided-journey/example-1")
     }
 })
 
