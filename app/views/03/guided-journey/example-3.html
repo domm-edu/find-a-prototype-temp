@@ -8,10 +8,10 @@
 {% block service %}
 <form action="check-answers" method="post" novalidate>
     
-  <span class="govuk-caption-l">Course 3 of 3</span>
-  <h1 class="govuk-heading-l">Tell us if this course is useful for you</h1>
+  <h1 class="govuk-heading-l">Help us improve your search results</h1>
 
-  <p>We're going to show you some courses we think you might like.</p>
+  <p>Telling us what you think of these example courses will help make your search results even more relevant to you.
+  </p>
 
   {% if (data['person-1'] == "Football") %}
 
@@ -153,7 +153,8 @@
             Distance
           </dt>
           <dd class="govuk-summary-list__value">
-            0.8 miles (Manchester)
+            <p>0.8 miles (Manchester)</p>
+            <p>Abbey College</p>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
