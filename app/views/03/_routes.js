@@ -33,7 +33,7 @@ router.post('/subject-answer', function(request, response) {
 
 router.post('/results-type1', function(request, response) {
 
-    var publishDate = request.session.data['person']
+    var publishDate = request.session.data['person-1']
     if (publishDate == "Social care"){
         response.redirect("/03/guided-journey/search-results-social-care")
     } 
@@ -56,7 +56,7 @@ router.post('/results-type1', function(request, response) {
 
 router.post('/psychology-skip', function(request, response) {
 
-    var noResults = request.session.data['person']
+    var noResults = request.session.data['person-1']
     if (noResults == "Sociology"){
         response.redirect("/03/guided-journey/check-answers")
     } 
