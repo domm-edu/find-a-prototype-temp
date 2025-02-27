@@ -50,7 +50,7 @@ router.post('/results-type1', function(request, response) {
         response.redirect("/03/guided-journey/search-results-sociology")
     } 
     else {
-        response.redirect("/03/guided-journey/search-results-few-results")
+        response.redirect("/03/guided-journey/not-built-yet")
     }
 })
 
@@ -66,7 +66,7 @@ router.post('/psychology-skip', function(request, response) {
     }
     
     else {
-        response.redirect("/03/guided-journey/example-1")
+        response.redirect("/03/guided-journey/not-built-yet")
     }
 })
 
