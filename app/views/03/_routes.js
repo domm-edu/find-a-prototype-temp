@@ -70,4 +70,15 @@ router.post('/psychology-skip', function(request, response) {
     }
 })
 
+router.post('/address-type', function(request, response) {
+
+    var studyLocation = request.session.data['study-location']
+    if (studyLocation == "School or college"){
+        response.redirect("/03/guided-journey/learning-method")
+    } 
+    else {
+        response.redirect("/03/guided-journey/how-far")
+    }
+})
+
 module.exports = router
