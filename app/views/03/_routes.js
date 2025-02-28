@@ -66,7 +66,7 @@ router.post('/psychology-skip', function(request, response) {
     }
     
     else {
-        response.redirect("/03/guided-journey/not-built-yet")
+        response.redirect("/03/guided-journey/example-1")
     }
 })
 
