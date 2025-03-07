@@ -8,11 +8,11 @@
 {% block service %}
 <form action="search-results-all" method="post" novalidate>
 
-  {{ govukRadios({
-    name: "insitutionName",
+  {{ govukCheckboxes({
+    name: "waste",
     fieldset: {
       legend: {
-        text: "Select the insitution",
+        text: "Select the colleges you want to see near [postcode]",
         isPageHeading: true,
         classes: "govuk-fieldset__legend--l"
       }
