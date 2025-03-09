@@ -23,9 +23,6 @@
           aria-expanded="false">Menu</button>
       </div>
 
-
-
-
     </div>
   </div>
   <div class="dfe-width-container dfe-header__service-name">
@@ -108,6 +105,11 @@ Text goes here, override this by overriding the block
 <!-- end service specific block-->
 </div>
 {% endblock %}    
+
+{% block scripts %}
+  {{ super() }}
+  <script src="/public/javascripts/dfefrontend.js"></script>
+{% endblock %}
 
 {% block footer %}
 

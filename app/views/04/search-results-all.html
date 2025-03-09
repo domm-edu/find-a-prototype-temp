@@ -35,7 +35,7 @@
           </div>
   
           <div class="moj-filter__heading-action">
-            <p><a class="govuk-link govuk-link--no-visited-state" href="">Clear filters</a></p>
+            <p><div id="clear-all-link"><a class="govuk-link govuk-link--no-visited-state clear-all-link" href="" onclick="clearFilters()">Clear filters</a></div></p>
           </div>
   
         </div>
@@ -62,7 +62,7 @@
   
       <div class="moj-filter__options">
   
-        <button type="submit" class="govuk-button" data-module="govuk-button" data-test-id="submit-button">
+        <button type="submit" class="govuk-button" onclick="applyFilters()">
           Apply filters
         </button>
   
@@ -88,25 +88,41 @@
             <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
   
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" checked>
+                <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="A Level">
                 <label class="govuk-label govuk-checkboxes__label" for="type">
-                  Blue (18)
+                  A Level
                 </label>
   
               </div>
-  
+
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="2" checked>
+                <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="Apprenticeship">
                 <label class="govuk-label govuk-checkboxes__label" for="type-2">
-                  Yellow (5)
+                  Apprenticeship
                 </label>
   
               </div>
   
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="type-3" name="type" type="checkbox" value="3">
+                <input class="govuk-checkboxes__input" id="type-3" name="type" type="checkbox" value="BTEC">
                 <label class="govuk-label govuk-checkboxes__label" for="type-3">
-                  Red (2)
+                  BTEC
+                </label>
+  
+              </div>
+  
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="type-4" name="type" type="checkbox" value="Diploma">
+                <label class="govuk-label govuk-checkboxes__label" for="type-4">
+                  Diploma
+                </label>
+  
+              </div>
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="type-5" name="type" type="checkbox" value="T Level">
+                <label class="govuk-label govuk-checkboxes__label" for="type-5">
+                  T Level
                 </label>
   
               </div>
@@ -130,28 +146,21 @@
             <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
   
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="status" name="status" type="checkbox" value="complete" checked>
-                <label class="govuk-label govuk-checkboxes__label" for="status">
-                  Completed (2)
+                <input class="govuk-checkboxes__input" id="requirement" name="requirement" type="checkbox" value="No requirements">
+                <label class="govuk-label govuk-checkboxes__label" for="requirement">
+                  No requirements
                 </label>
   
               </div>
   
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="incomplete">
-                <label class="govuk-label govuk-checkboxes__label" for="status-2">
-                  Incomplete (5)
+                <input class="govuk-checkboxes__input" id="requirement-2" name="requirement" type="checkbox" value="GCSE passes in maths and English">
+                <label class="govuk-label govuk-checkboxes__label" for="requirement-2">
+                  GCSE passes in maths and English
                 </label>
   
               </div>
-  
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="status-3" name="status" type="checkbox" value="inprogress">
-                <label class="govuk-label govuk-checkboxes__label" for="status-3">
-                  In progress (3)
-                </label>
-  
-              </div>
+
   
             </div>
   
@@ -185,11 +194,6 @@
         <h2 class="govuk-summary-card__title">
           <a href="course-example" style="margin-right: 10px;">Work based horse care and management</a>
         </h2>
-        <ul class="govuk-summary-card__actions">
-          <li class="govuk-summary-card__action">
-            <a class="govuk-link" href="#">Don't show courses like this<span class="govuk-visually-hidden"> of University of Bristol (University of Bristol)</span></a>
-          </li>
-        </ul>
       </div>
       <div class="govuk-summary-card__content">
         <dl class="govuk-summary-list">
@@ -336,6 +340,14 @@
               Flexible
             </dd>
           </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Action
+            </dt>
+            <dd class="govuk-summary-list__value">
+             <a href="">Don't show courses like this</a>
+            </dd>
+          </div>
         </dl>
       </div>
     </div>
@@ -398,6 +410,14 @@
             </dt>
             <dd class="govuk-summary-list__value">
               2 years
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Action
+            </dt>
+            <dd class="govuk-summary-list__value">
+             <a href="">Don't show courses like this</a>
             </dd>
           </div>
         </dl>
@@ -464,6 +484,14 @@
               2 years
             </dd>
           </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Action
+            </dt>
+            <dd class="govuk-summary-list__value">
+             <a href="">Don't show courses like this</a>
+            </dd>
+          </div>
         </dl>
       </div>
     </div>
@@ -526,6 +554,14 @@
             </dt>
             <dd class="govuk-summary-list__value">
               18 months
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Action
+            </dt>
+            <dd class="govuk-summary-list__value">
+             <a href="">Don't show courses like this</a>
             </dd>
           </div>
         </dl>
@@ -606,6 +642,14 @@
             </dt>
             <dd class="govuk-summary-list__value">
               Flexible
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Action
+            </dt>
+            <dd class="govuk-summary-list__value">
+             <a href="">Don't show courses like this</a>
             </dd>
           </div>
         </dl>
@@ -672,6 +716,14 @@
               2 years
             </dd>
           </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Action
+            </dt>
+            <dd class="govuk-summary-list__value">
+             <a href="">Don't show courses like this</a>
+            </dd>
+          </div>
         </dl>
       </div>
     </div>
@@ -736,6 +788,14 @@
               2 years
             </dd>
           </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Action
+            </dt>
+            <dd class="govuk-summary-list__value">
+             <a href="">Don't show courses like this</a>
+            </dd>
+          </div>
         </dl>
       </div>
     </div>    <div class="govuk-summary-card">
@@ -797,6 +857,14 @@
             </dt>
             <dd class="govuk-summary-list__value">
               18 months
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Action
+            </dt>
+            <dd class="govuk-summary-list__value">
+             <a href="">Don't show courses like this</a>
             </dd>
           </div>
         </dl>
@@ -879,6 +947,14 @@
               Flexible
             </dd>
           </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Action
+            </dt>
+            <dd class="govuk-summary-list__value">
+             <a href="">Don't show courses like this</a>
+            </dd>
+          </div>
         </dl>
       </div>
     </div>
@@ -943,6 +1019,14 @@
               2 years
             </dd>
           </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Action
+            </dt>
+            <dd class="govuk-summary-list__value">
+             <a href="">Don't show courses like this</a>
+            </dd>
+          </div>
         </dl>
       </div>
     </div>
@@ -1005,6 +1089,14 @@
             </dt>
             <dd class="govuk-summary-list__value">
               2 years
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Action
+            </dt>
+            <dd class="govuk-summary-list__value">
+             <a href="">Don't show courses like this</a>
             </dd>
           </div>
         </dl>
