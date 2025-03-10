@@ -17,6 +17,34 @@ router.post('/all-nearby-or-nothing', function(request, response) {
     }
 })
 
+router.post('/results-type', function(request, response) {
+
+    var publishDate = request.session.data['subject-1']
+    if (publishDate == "Business"){
+        response.redirect("search-results-business")
+    } 
+    else if (publishDate == "business"){
+        response.redirect("search-results-business")
+    } 
+    else if (publishDate == "business studies"){
+        response.redirect("search-results-business")
+    }
+    else if (publishDate == "Business Studies"){
+        response.redirect("search-results-business")
+    }
+    else if (publishDate == "Business studies"){
+        response.redirect("search-results-business")
+    }
+    else if (publishDate == "Biology"){
+        response.redirect("search-results-biology")
+    } 
+    else if (publishDate == "biology"){
+        response.redirect("search-results-biology")
+    } 
+    else {
+        response.redirect("/03/guided-journey/not-built-yet")
+    }
+})
 
 
 
