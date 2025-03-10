@@ -20,6 +20,8 @@ router.post('/all-nearby-or-nothing', function(request, response) {
 router.post('/results-type', function(request, response) {
 
     var publishDate = request.session.data['subject-1']
+    var jobOrCareer = request.session.data['job-1'];
+
     if (publishDate == "Business"){
         response.redirect("search-results-business")
     } 
@@ -40,11 +42,33 @@ router.post('/results-type', function(request, response) {
     } 
     else if (publishDate == "biology"){
         response.redirect("search-results-biology")
+    }
+    else if (jobOrCareer == "Business"){
+        response.redirect("search-results-business")
     } 
+    else if (jobOrCareer == "business"){
+        response.redirect("search-results-business")
+    } 
+    else if (jobOrCareer == "business studies"){
+        response.redirect("search-results-business")
+    }
+    else if (jobOrCareer == "Business Studies"){
+        response.redirect("search-results-business")
+    }
+    else if (jobOrCareer == "Business studies"){
+        response.redirect("search-results-business")
+    }
+    else if (jobOrCareer == "Biology"){
+        response.redirect("search-results-biology")
+    } 
+    else if (jobOrCareer == "biology"){
+        response.redirect("search-results-biology")
+    }
     else {
-        response.redirect("/03/guided-journey/not-built-yet")
+        response.redirect("not-built-yet")
     }
 })
+
 
 
 
