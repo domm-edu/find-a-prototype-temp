@@ -152,6 +152,9 @@
   
   .apply-button-top-margin {
     margin-top: 85px;
+    @include govuk-media-query(mobile) {
+        margin-top: 130px;
+    }
   }
   
   .apply-button:hover {

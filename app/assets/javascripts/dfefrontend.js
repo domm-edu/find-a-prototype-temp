@@ -58,7 +58,7 @@ function applyFilters() {
         }
     });
 
-    const monthHeaders = Array.from(document.querySelectorAll('.month-header'));
+    const monthHeaders = Array.from(document.querySelectorAll('.govuk-summary-card__title'));
     monthHeaders.forEach(monthHeader => {
         const monthWrapper = monthHeader.closest('.month-wrapper');
         const cardLinks = Array.from(monthWrapper.querySelectorAll('.card-link'));
@@ -101,7 +101,7 @@ function clearFilters() {
         card.style.display = 'block';
     });
 
-    const monthWrappers = document.querySelectorAll('.govuk-summary-card');
+    const monthWrappers = document.querySelectorAll('.month-wrapper');
     monthWrappers.forEach(monthWrapper => {
         monthWrapper.style.display = 'block';
     });
