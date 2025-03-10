@@ -55,75 +55,20 @@
     }) }}
 
   </form>
-  <form action="http://localhost:5000//helloworld" method="post">
-    {{ govukButton({
-      text: "HELLOWORLD API CALL TO PYTHON"
-    }) }}
+  <form>
+    <button type="button" id="submitButton", value="APISUBMIT"></button>
   </form>
-  <!-- HTTP REQUEST WITH PARAMETERS-->
-  
-  <form id="jsonForm">
-    <label for="name">Course:</label>
-    <input type="text" id="course" name="course"><br><br>
-    <label for="location">Location:</label>
-    <input type="text" id="location" name="location"><br><br>
-    <button type="button" onclick="submitForm()">Submit</button>
-</form>
-
-  <div id ='custresponse'></div>
   <script>
-    function submitForm() {
-        const form = document.getElementById('jsonForm');
-        const formData = new FormData(form);
-        const jsonData = {};
-
-        formData.forEach((value, key) => {
-            jsonData[key] = value;
-        });
-        
-        fetch('http://localhost:5000/runvectorsearch', {            
-            //mode: 'no-cors',
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Accept':'application/json'
-            },
-            body: JSON.stringify(jsonData)
-        })
-        .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-        })
-        .then(data => {
-          console.info('GETTING DATA')
-          console.info(data)
-          //console.info(response.data)
-          const responseDiv = document.getElementById('custresponse')
-          console.info('SETTING CUSTOM RESPONSE')
-          responseDiv.innerHTML = `<p>${JSON.stringify(data, null, 2)}</p>`
-        })
-        .catch(error => {
-        console.error('Error:', error)
-        const responseDiv = document.getElementById('custresponse')
-        responseDiv.innerHTML = `<p style="color: red;">Custom Error: ${error.message}</p>`
-        });
-    }
-
+    document.addEventListener(
+      'DOMContentLoaded', function () {
+        document.getElementById('submitButton')
+        .addEventListener('click', function () {
+                alert('Submit button clicked!');
+            });
+      }
+    )
   </script>
-
-<!--
-  <form action="/02/runexternalhelloworldapi" method="get">
-    {{ govukButton({
-      text: "HELLOWORLD API CALL TO PYTHON VIA NODEJS"
-    }) }}
-  </form>
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
--->
-
-
 
 
 
