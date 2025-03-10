@@ -80,6 +80,24 @@
         <p class="govuk-body-m"><a href="interests">Search again</a></p>
         {% endif %}
 
+        {% if resultsPage %}
+
+        <h2 class="govuk-heading-l">
+          {{ pageHeading }}
+        </h2>
+
+       <p class="hero__description">
+        <p>You've searched for:</p>
+         <ul class="govuk-list govuk-list--bullet">
+            <li class="govuk-body govuk-!-font-weight-bold">{{ data['subject-1'] }}</li>
+            <li class="govuk-body govuk-!-font-weight-bold">{{ data['job-1'] }}</li>
+         </ul>
+       </p>
+
+       <p class="govuk-body-m"><a href="interests">Search again</a></p>
+
+        {% endif %}
+
 
       </div>
     </div>
