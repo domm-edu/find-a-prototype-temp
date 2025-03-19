@@ -4,6 +4,7 @@
 
 {% block header %}  
 
+
 <header class="dfe-header" role="banner">
   <div class="dfe-width-container dfe-header__container">
     <div class="dfe-header__logo">
@@ -30,6 +31,56 @@
   </div>
 
 </header>
+
+
+<!--
+{% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}
+
+{{ header({
+  "showNav": "false",
+  "showSearch": "false",
+  "showHeaderActionLinks": "false",
+  "logoPath": "public/images",
+  "searchAction": "/search/",
+  "searchInputName": "q",
+  "logoAltText": "Department for Education",
+  "homeHref": "https://gov.uk",
+  "selectedNav": view,
+  "service": {
+    "name": "",
+    "serviceUrl": "/"
+  },
+  "headerActionLinks": [
+    {
+      "url"  : "/",
+      "label" : "My account"
+    },
+    {
+      "url"  : "/",
+      "label" : "Sign out"
+    }
+  ],
+  "primaryLinks": [
+      {
+      "url"  : "#",
+      "label" : "Home"
+    }, {
+      "url"  : "#",
+      "label" : "About"
+    }, {
+      "url"  : "#",
+      "label" : "News"
+    }
+  ]
+})
+}}
+
+{{ govukServiceNavigation({
+  serviceName: "Explore your options after school or college",
+  serviceUrl: "#"
+}) }}
+
+-->
 
 <section class="dfe-page-grey">
   <div class="govuk-width-container">
@@ -159,10 +210,6 @@ Text goes here, override this by overriding the block
         {
           href: "#",
           text: "Terms and conditions"
-        },
-        {
-          href: "#",
-          text: "information sources"
         }
       ]
     },
