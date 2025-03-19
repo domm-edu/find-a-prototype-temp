@@ -6,13 +6,12 @@
 
 
 {% block service %}
-<form action="how-far" method="post" novalidate>
 
   {{ govukErrorSummary({
     titleText: "There is a problem",
     errorList: [
       {
-        text: "Enter a town, city or postcode",
+        text: "Enter an English town, city or postcode",
         href: "#location-guided"
       }
     ]
@@ -25,9 +24,9 @@
       </label>
     </h1>
     <p id="event-name-error" class="govuk-error-message">
-      <span class="govuk-visually-hidden">Error:</span> Enter a town, city or postcode
+      <span class="govuk-visually-hidden">Error:</span> Enter an English town, city or postcode
     </p>
-    <input class="govuk-input govuk-input--width-20 govuk-input--error" id="location-guided" name="location-guided" type="text">
+    <input class="govuk-input govuk-input--width-20 govuk-input--error" id="location-guided" name="location-guided" type="text" value="Glasgow">
   </div>
     <p><a href="">Use my current location</a></p>
     
@@ -35,7 +34,7 @@
     {{ govukButton({
       text: "Continue"
     }) }}
-  </form>
+
 
   </div>
 </div>
