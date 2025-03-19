@@ -35,8 +35,16 @@
         </dt>
         <dd class="govuk-summary-list__value">
           <p class="govuk-body">0.1 miles (Manchester)</p>
-          <p class="govuk-body">Loreto College</p>
           <p class="govuk-body"><a href="https://www.google.com/maps/dir/Manchester/The+College+of+Animal+Welfare+(CAW)+-+Wigan+Centre,+The+College+of+Animal+Welfare,+18+Beecham+Ct,+Goose+Green,+Wigan+WN3+6PR/@53.5282425,-2.6152816,11z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x487a4d4c5226f5db:0xd9be143804fe6baa!2m2!1d-2.2426305!2d53.4807593!1m5!1m1!1s0x487b0fca6e4e0c49:0x54c1830977f74bd6!2m2!1d-2.6593619!2d53.5290265!3e3?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D">How do I get there?</a></p>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Provider
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>Loreto College</p>
+          <p><a href="">Visit provider website</a> </p>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -83,45 +91,29 @@
           <p>No course overview available</p>
         </dd>
       </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Support for additional needs
-        </dt>
-        <dd class="govuk-summary-list__value">
-          <p class="govuk-body"><a href="https://www.northchaddertonschool.co.uk/Safeguarding/Safeguarding-and-Wellbeing/">Find out the support available if you have additional needs</a></p>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Next open day
-        </dt>
-        <dd class="govuk-summary-list__value">
-          <p class="govuk-body"><a href="https://www.northchaddertonschool.co.uk/Parents/Key-Dates/">Find out about open days</a></p>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          What jobs can I do after this course?
-        </dt>
-        <dd class="govuk-summary-list__value">
-          <p class="govuk-body"><a href="https://nationalcareers.service.gov.uk/explore-careers/search-results?SearchTerm=social+care">Explore possible careers on the National Careers Service website</a></p>
-        </dd>
-      </div>
     </dl>
 
-    <div class="govuk-button-group">
-      {{ govukButton({
-        text: "I'm interested in this course",
-        href: "interested-in-course"
-      }) }}
-    
-      {{ govukButton({
-        text: "Don't show me courses like this",
-        classes: "govuk-button--secondary",
-        href: "dont-show-courses-like-this"
-      }) }}
-    </div>
+    <h3 class="govuk-heading-m">Interested in this course</h3>
+    <p>If you're interested in this course, find out more information about how you can apply.</p>
+    {{ govukButton({
+      text: "Find out more about applying",
+      href: "#"
+    }) }}
 
-    <a href="#"><img class="full-width-image" alt="Care" src="/public/images/share.png" style="max-width: 300px;"></a>
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+    <h3 class="govuk-heading-m">More about this provider</h3>
+
+    <p><a href="">Find out about support for additional needs</a></p>
+    <p><a href="">Find out about open days</a></p>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <h3 class="govuk-heading-m">Supporting information</h3>
+    <p><a href="">What can I do after this course?</a></p>
+  </div>
+</div>
+
   
+
+ 
 {% endblock %}
