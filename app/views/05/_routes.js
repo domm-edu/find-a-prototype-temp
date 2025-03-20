@@ -17,6 +17,28 @@ router.post('/all-nearby-or-nothing', function(request, response) {
     }
 })
 
+router.post('/subjects-question', function(request, response) {
+
+    var subjectQuestion = request.session.data['school-subjects-radios']
+    if (subjectQuestion == "Yes"){
+        response.redirect("school-subjects")
+    }
+    else {
+        response.redirect("learning-method")
+    }
+})
+
+router.post('/jobs-question', function(request, response) {
+
+    var subjectQuestion = request.session.data['jobs-careers-radios']
+    if (subjectQuestion == "Yes"){
+        response.redirect("jobs-and-careers")
+    }
+    else {
+        response.redirect("school-subjects-question")
+    }
+})
+
 router.post('/results-type', function(request, response) {
 
     var publishDate = request.session.data['subject-1']
