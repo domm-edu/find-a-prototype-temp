@@ -280,8 +280,10 @@
           </dt>
           <dd class="govuk-summary-list__value">
             <p class="govuk-body">{{ entryRequirements }}</p>
-            <p class="govuk-body"><a href="dont-meet-entry-requirements">What can I do if I don't meet these?</a></p>
-          </dd>
+            {% if entryRequirements !== "No entry requirements" %}
+              <p class="govuk-body"><a href="dont-meet-entry-requirements">What can I do if I don't meet these?</a></p>
+            {% endif %}
+            </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
