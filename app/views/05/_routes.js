@@ -43,6 +43,8 @@ router.post('/results-type', function(request, response) {
 
     var publishDate = request.session.data['subject-1']
     var jobOrCareer = request.session.data['job-1'];
+    var jobRadios = request.session.data['jobs-careers-radios'];
+    var subjectRadios = request.session.data['school-subjects-radios'];
 
     if (publishDate == "Business"){
         response.redirect("search-results-business")
@@ -85,6 +87,12 @@ router.post('/results-type', function(request, response) {
     } 
     else if (jobOrCareer == "biology"){
         response.redirect("search-results-biology")
+    }
+    else if (jobRadios == "No"){
+        response.redirect("search-results-all")
+    }
+    else if (subjectRadios == "No"){
+        response.redirect("search-results-all")
     }
     else {
         response.redirect("not-built-yet")
