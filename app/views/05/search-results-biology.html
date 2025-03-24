@@ -960,3 +960,71 @@
 </div>
 
 {% endblock %}
+
+{% block footer %}
+
+{% from "govuk/components/footer/macro.njk" import govukFooter %}
+
+{{ govukFooter({
+  navigation: [
+    {
+      title: "Website information",
+      width: "two-thirds",
+      columns: 2,
+      items: [
+        {
+          href: "#",
+          text: "About us"
+        },
+        {
+          href: "#",
+          text: "Help"
+        },
+        {
+          href: "#",
+          text: "Privacy and cookies"
+        },
+        {
+          href: "#",
+          text: "Accessibility statement"
+        },
+        {
+          href: "#",
+          text: "Terms and conditions"
+        }
+      ]
+    },
+    {
+      title: "Sites for other UK countries",
+      width: "one-third",
+      items: [
+        {
+          href: "#",
+          text: "Scotland"
+        },
+        {
+          href: "#",
+          text: "Wales"
+        },
+        {
+          href: "#",
+          text: "Northern Ireland"
+        }
+      ]
+    }
+  ],
+  meta: {
+    items: [
+      {
+        href: "search-results-few-results-biology",
+        text: "Example of when there are few search results"
+      },
+      {
+        href: "search-results-no-results-biology",
+        text: "Example of when there are no search results"
+      }
+    ]
+    }
+}) }}
+
+{% endblock %}
