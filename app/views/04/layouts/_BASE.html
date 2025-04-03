@@ -23,9 +23,6 @@
           aria-expanded="false">Menu</button>
       </div>
 
-
-
-
     </div>
   </div>
   <div class="dfe-width-container dfe-header__service-name">
@@ -80,7 +77,25 @@
 
         <p class="govuk-body-m">{{ pageDescription }}</p>
 
-        <p class="govuk-body-m"><a href="interests">Search again</a></p>
+        <p class="govuk-body-m"><a href="jobs-and-careers">Change your search</a></p>
+        {% endif %}
+
+        {% if resultsPage %}
+
+        <h2 class="govuk-heading-l">
+          {{ pageHeading }}
+        </h2>
+
+       <p class="hero__description">
+        <p>You searched for:</p>
+         <ul class="govuk-list govuk-list--bullet">
+          <li class="govuk-body govuk-!-font-weight-bold">{{ data['job-1'] }}</li>
+            <li class="govuk-body govuk-!-font-weight-bold">{{ data['subject-1'] }}</li>
+         </ul>
+       </p>
+
+       <p class="govuk-body-m"><a href="jobs-and-careers">Change your search</a></p>
+
         {% endif %}
 
 
@@ -108,6 +123,11 @@ Text goes here, override this by overriding the block
 <!-- end service specific block-->
 </div>
 {% endblock %}    
+
+{% block scripts %}
+  {{ super() }}
+  <script src="/public/javascripts/dfefrontend.js"></script>
+{% endblock %}
 
 {% block footer %}
 

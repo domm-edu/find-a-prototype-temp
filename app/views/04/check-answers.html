@@ -6,17 +6,29 @@
 
 
 {% block service %}
-<form action="search-results-guided" method="post" novalidate>
+<form action="results-type" method="post" novalidate>
 <h1 class="govuk-heading-l">What you've told us</h1>
 <p>Check your answers, and change them if you'd like to, before viewing your search results.</p>
 
 <dl class="govuk-summary-list">
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Interests
+      Jobs or careers
     </dt>
     <dd class="govuk-summary-list__value">
-      {{ data['person-1'] }}
+      {{ data['job-1'] }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="interests">Change<span class="govuk-visually-hidden"> name</span></a>
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      School subjects
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['subject-1'] }}
     </dd>
     <dd class="govuk-summary-list__actions">
       <a class="govuk-link" href="interests">Change<span class="govuk-visually-hidden"> name</span></a>
@@ -28,7 +40,7 @@
       Location
     </dt>
     <dd class="govuk-summary-list__value">
-     {{ data['study-location-conditional'] }}
+     {{ data['location-guided'] }}
     </dd>
     <dd class="govuk-summary-list__actions">
       <a class="govuk-link" href="location">Change<span class="govuk-visually-hidden"> date of birth</span></a>
@@ -67,7 +79,7 @@
 
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Learning style
+      Course preference
     </dt>
     <dd class="govuk-summary-list__value">
       {{ data['learning-style'] or "No learning style added" }}
@@ -99,6 +111,8 @@
     </dd>
   </div>
 </dl>
+
+<p>Find out <a href="">how we use AI</a> to bring you relevant results.</p>
 
 <button type="submit" class="govuk-button" data-module="govuk-button">
   Search
