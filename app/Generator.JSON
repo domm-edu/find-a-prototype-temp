@@ -1,0 +1,16 @@
+[
+    {
+        "Title":"Work based horse care and management",
+        "Course Type": "Level 3 Diploma",
+        "Distance": 20,
+        "Duration": 18,
+        "Requirements":"No academic entry requirements but previous experience with horses required"
+    },
+    {
+        "Title":"A Level Biology",
+        "Course Type": "Level 3 Diploma",
+        "Distance": 0.2,
+        "Duration": 24,
+        "Requirements":"GCSE Biology (Grade 6 or above)"
+    }
+]

@@ -1,0 +1,71 @@
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON to HTML</title>
+</head>
+<body>
+     <div id="content"></div>
+     <h1> Test Table Generation </h1>
+     <table id="MyTable">
+
+        <thead>
+            <tr>
+                <th>FIELD</th>
+                <th>VALUE</th>
+            </tr>
+        </thead>
+     </div>
+     <!-- HTML script to have a look at reading off parameters from JSON locally-->
+     <script>
+        
+
+         fetch('./Generator.JSON',{
+         headers: {
+        
+        'Access-Control-Allow-Origin':'*'
+        
+        }}
+         )
+             .then(response => response.json())
+             .then(jsonData => {
+                 document.title = jsonData.title;
+
+                 const contentDiv = document.getElementById('content');
+                 const header = document.createElement('h1');
+                 const tableDiv=document.getElementById('MyTable')
+                 header.textContent = jsonData.header;                 
+                 console.log(jsonData);
+                 for (let itr=0; itr<jsonData.length;itr++){
+                    console.log(jsonData[itr])
+                    var title=document.createTextNode('Title: '+jsonData[itr]['Title'])
+                    var coursetype=document.createTextNode('Course type: '+jsonData[itr]['Course Type'])
+                    var distance=document.createTextNode('Distance: '+jsonData[itr]['Distance'])
+                    var duration=document.createTextNode('Duration: '+jsonData[itr]['Duration'])
+                    contentDiv.appendChild(title)
+                    contentDiv.appendChild(document.createElement('br'))
+                    contentDiv.appendChild(coursetype)
+                    contentDiv.appendChild(document.createElement('br'))
+                    contentDiv.appendChild(duration)
+                    contentDiv.appendChild(document.createElement('br'))
+                    contentDiv.appendChild(distance)
+                    contentDiv.appendChild(document.createElement('br'))
+                    contentDiv.appendChild(document.createElement('br'))
+
+                    let row = tableDiv.insertRow();
+                    let v1=row.insertCell(0) // First column
+                    v1.textContent="Title"
+                    let v2=row.insertCell(1) // second column
+                    v2.textContent=title.textContent
+                    
+                    
+                 }
+                
+                console.log('HELLO')
+                console.log(contentDiv)
+                console.log(contentDiv)
+             })
+             .catch(error => console.error('Error fetching JSON:', error));
+     </script>
+ </body>
+ </html>
+ 
