@@ -52,11 +52,17 @@
                     contentDiv.appendChild(document.createElement('br'))
 
                     let row = tableDiv.insertRow();
-                    let v1=row.insertCell(0) // First column
-                    v1.textContent="Title"
-                    let v2=row.insertCell(1) // second column
-                    v2.textContent=title.textContent
+                    let v11=row.insertCell(0); // First column
+                    v11.textContent="Title";
+                    let v12=row.insertCell(1); // second column
+                    v12.textContent=title.textContent;
+                    let row2=tableDiv.insertRow();
+                    let v21=row2.insertCell(0);
+                    let v22=row2.insertCell(1);
+                    v21.textContent='Course type'
+                    v22.textContent=coursetype.textContent
                     
+
                     
                  }
                 
