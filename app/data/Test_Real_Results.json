@@ -1,0 +1,229 @@
+{
+    "GEOCODING LATITUDE": 0,
+    "GEOCODING LOCATION": "",
+    "GEOCODING_LONGITUDE": 0,
+    "INTENT_RECOGNITION": "{}",
+    "PAYLOAD": [
+        {
+            "COURSE_NAME": "Biology",
+            "DATA_SOURCE": "NCS",
+            "DISTANCE": 0.0,
+            "ID": "Doc_75438",
+            "POSTCODE": "S8 8BR",
+            "PROVIDER_NAME": "MEADOWHEAD SCHOOL ACADEMY TRUST",
+            "RELEVANCY": 0.04046317934989929,
+            "START_DATE": "1900-01-01T00:00:00Z",
+            "WHO_THIS_COURSE_IS_FOR": "\n        Course: Biology\n        Provider: MEADOWHEAD SCHOOL ACADEMY TRUST\n        Provider type: NCS\n        Start Date: 1900-01-01T00:00:00Z\n        Distance: 0.0\n        Who is this course for? : Biological molecules, cells, how organisms exchange substances with their environment and genetic information, variation and relationships between organisms. _x000D_\nEnergy transfers in and between organisms, how organisms respond to changes in their internal and external environments, genetics, populations, evolution and ecosystems and the control of gene expression. \t\n        Location: Sheffield\n        Course type: nan\n        Sector: nan\n        Entry Requirements: GCSE 6-6 in Combined Sciences or  GCSE 6 in Biology plus one other science 6 grade; and a 5 in Maths\n        Study Mode: Full Time\n        LearnAimRefTitle: GCE A Level in Biology\n        "
+        },
+        {
+            "COURSE_NAME": "T Level Health and Science - Science",
+            "DATA_SOURCE": "NCS",
+            "DISTANCE": 0.0,
+            "ID": "Doc_97592",
+            "POSTCODE": "S1 4QF",
+            "PROVIDER_NAME": "UTC SHEFFIELD OLYMPIC LEGACY PARK",
+            "RELEVANCY": 0.036764707416296005,
+            "START_DATE": "2024-09-02T00:00:00Z",
+            "WHO_THIS_COURSE_IS_FOR": "\n        Course: T Level Health and Science - Science\n        Provider: UTC SHEFFIELD OLYMPIC LEGACY PARK\n        Provider type: NCS\n        Start Date: 2024-09-02T00:00:00Z\n        Distance: 0.0\n        Who is this course for? : You will develop a general understanding of health and science, including:_x000D_\n_x000D_\nWorking within the health and science sector_x000D_\nHealth, safety and environmental regulations_x000D_\nManaging information and data_x000D_\nPrinciples of good scientific and clinical practice_x000D_\nCore science concepts including the structure of cells, tissues and large molecules, genetics, microbiology and immunology_x000D_\n_x000D_\nYou will also develop the knowledge and skills specific to science:_x000D_\n_x000D_\nUnderstanding the science sector_x000D_\nFurther science knowledge, including cell cycle and cellular respiration, enzyme and protein structure, pathogens, classification of biological materials, kinetic changes and relevant analytical techniques_x000D_\nScientific methodology_x000D_\nExperimental equipment and techniques_x000D_\nEthics of science_x000D_\n_x000D_\nIn addition to the core content, each student will also complete at least one module of occupation-specific content:_x000D_\n_x000D_\nLaboratory sciences_x000D_\nFood sciences_x000D_\nMetrology sciences\n        Location: Sheffield\n        Course type: T Levels\n        Sector: nan\n        Entry Requirements: There are no national entry requirements for starting a T Level. These are set by the individual college or school. Contact us to find out more.\n        Study Mode: Full Time\n        LearnAimRefTitle: nan\n        "
+        },
+        {
+            "COURSE_NAME": "GCSE (9-1) in Combined Science: Trilogy",
+            "DATA_SOURCE": "NCS",
+            "DISTANCE": 0.0,
+            "ID": "Doc_87724",
+            "POSTCODE": "S61 2BD",
+            "PROVIDER_NAME": "THOMAS ROTHERHAM COLLEGE",
+            "RELEVANCY": 0.026896249502897263,
+            "START_DATE": "2025-09-01T00:00:00Z",
+            "WHO_THIS_COURSE_IS_FOR": "\n        Course: GCSE (9-1) in Combined Science: Trilogy\n        Provider: THOMAS ROTHERHAM COLLEGE\n        Provider type: NCS\n        Start Date: 2025-09-01T00:00:00Z\n        Distance: 0.0\n        Who is this course for? : Biology: Cell biology, health of and control in the human body, respiration, photosynthesis, ecology and an introduction to genes and evolution._x000D_\n_x000D_\nChemistry: Atomic structure, bonding, chemical reactions, chemical analysis and chemistry of the atmosphere._x000D_\n_x000D_\nPhysics: Energy, electricity, forces, waves and magnetism.\n        Location: Rotherham\n        Course type: nan\n        Sector: nan\n        Entry Requirements: At least 1 x D/3 in a GCSE Science subject (or a Distinction in BTEC Level 2 Science)._x000D_\n_x000D_\nAt least Grade 2 in GCSE Maths.\n        Study Mode: Full Time\n        LearnAimRefTitle: GCSE (9-1) in Combined Science: Trilogy\n        "
+        },
+        {
+            "COURSE_NAME": "GCE A Level in Biology A",
+            "DATA_SOURCE": "NCS",
+            "DISTANCE": 0.0,
+            "ID": "Doc_55532",
+            "POSTCODE": "S21 4GN",
+            "PROVIDER_NAME": "ECKINGTON SCHOOL",
+            "RELEVANCY": 0.026179194450378418,
+            "START_DATE": "2025-09-04T00:00:00Z",
+            "WHO_THIS_COURSE_IS_FOR": "\n        Course: GCE A Level in Biology A\n        Provider: ECKINGTON SCHOOL\n        Provider type: NCS\n        Start Date: 2025-09-04T00:00:00Z\n        Distance: 0.0\n        Who is this course for? : This course is ideal for learners who have a strong interest in science of living things and their environments. Within the course students will learn about biological molecules, how organisms exchange materials with their environment and how they respond to changes in internal and external environments. Students will also explore genetics, populations, evolution and ecosystems, and the control of gene expression.\n        Location: Sheffield\n        Course type: nan\n        Sector: nan\n        Entry Requirements: Grade 6 GCSE Combined Science or Grade 6 GCSE Biology _x000D_\nGrade 5 in GCSE English and Math\n        Study Mode: Full Time\n        LearnAimRefTitle: GCE A Level in Biology A\n        "
+        },
+        {
+            "COURSE_NAME": "Biology A Level",
+            "DATA_SOURCE": "NCS",
+            "DISTANCE": 0.0,
+            "ID": "Doc_80953",
+            "POSTCODE": "S41 8AG",
+            "PROVIDER_NAME": "ST MARY'S CATHOLIC HIGH SCHOOL, A CATHOLIC VOLUNTARY ACADEMY",
+            "RELEVANCY": 0.02500000223517418,
+            "START_DATE": "2024-09-05T00:00:00Z",
+            "WHO_THIS_COURSE_IS_FOR": "\n        Course: Biology A Level\n        Provider: ST MARY'S CATHOLIC HIGH SCHOOL, A CATHOLIC VOLUNTARY ACADEMY\n        Provider type: NCS\n        Start Date: 2024-09-05T00:00:00Z\n        Distance: 0.0\n        Who is this course for? : Biology A Level\n        Location: Chesterfield\n        Course type: nan\n        Sector: nan\n        Entry Requirements: 6 at GCSE OR 66 at Combined Science and Grade 6 in Maths at GCSE\n        Study Mode: Full Time\n        LearnAimRefTitle: GCE A Level in Biology\n        "
+        },
+        {
+            "COURSE_NAME": "Biology",
+            "DATA_SOURCE": "NCS",
+            "DISTANCE": 0.0166,
+            "ID": "Doc_57509",
+            "POSTCODE": "S2 2RJ",
+            "PROVIDER_NAME": "ALL SAINTS' CATHOLIC HIGH SCHOOL",
+            "RELEVANCY": 0.02469220757484436,
+            "START_DATE": "2024-09-03T00:00:00Z",
+            "WHO_THIS_COURSE_IS_FOR": "\n        Course: Biology\n        Provider: ALL SAINTS' CATHOLIC HIGH SCHOOL\n        Provider type: NCS\n        Start Date: 2024-09-03T00:00:00Z\n        Distance: 0.0166\n        Who is this course for? : The Biology A Level course builds upon the student's knowledge and understanding gained during GCSE Additional_x000D_\nScience and Biology. Biology A Level will give students the skills they need to make connections and associations with_x000D_\nall living things around them. Biology literally means the study of life and if that's not important, what is? Being such a_x000D_\nbroad topic, students are bound to find a specific area of interest._x000D_\n_x000D_\nA Level_x000D_\nBiological molecules_x000D_\nCells_x000D_\nOrganisms exchange substances with their environment_x000D_\nGenetic information, variation and relationships between organisms_x000D_\nEnergy transfers in and between organisms_x000D_\nOrganisms respond to changes in their internal and external environments_x000D_\nGenetics, populations, evolution and ecosystems_x000D_\nThe control of gene and expression_x000D_\nAssessment_x000D_\nBiology, like all sciences, is a practical subject. Throughout the course you will carry out practical activities._x000D_\nThese practicals will give you the skills and confidence needed to investigate the way living things behave and work. It_x000D_\nwill also ensure that if you chose to study a Biology-based subject at university, you will have the practical skills needed_x000D_\nto carry out successful experiments in your degree._x000D_\nSkills developed and opportunities available_x000D_\nStudents develop skills in applying knowledge, analysing and interpreting data, presenting scientific arguments and_x000D_\nideas, carrying out investigative activities, including appropriate risk management in a range of contents._x000D_\nThe course lays the foundation for any further study of biology or related subjects in higher education. Possible careers_x000D_\ninclude: Medicine, Biochemistry, Veterinary Sciences, Environmental Studies, Genetics, Ecology, Physiotherapy, Nursing,_x000D_\nSports Sciences.\n        Location: Sheffield\n        Course type: nan\n        Sector: nan\n        Entry Requirements: 5 GSCE Grade 4-9 including Mathematics and English Language and GCSE 6 in Biology / Science and GCSE grade 5 in Mathematics\n        Study Mode: Full Time\n        LearnAimRefTitle: GCE A Level in Biology\n        "
+        },
+        {
+            "COURSE_NAME": "A-Level Biology",
+            "DATA_SOURCE": "NCS",
+            "DISTANCE": 0.0,
+            "ID": "Doc_84410",
+            "POSTCODE": "S11 9QH",
+            "PROVIDER_NAME": "SILVERDALE SCHOOL",
+            "RELEVANCY": 0.024535194039344788,
+            "START_DATE": "2025-09-01T00:00:00Z",
+            "WHO_THIS_COURSE_IS_FOR": "\n        Course: A-Level Biology\n        Provider: SILVERDALE SCHOOL\n        Provider type: NCS\n        Start Date: 2025-09-01T00:00:00Z\n        Distance: 0.0\n        Who is this course for? : This course is for anyone who wants to go into the medical field or enjoys learning about organisms and molecules.\n        Location: SHEFFIELD\n        Course type: nan\n        Sector: nan\n        Entry Requirements: Grade 6 or above\u00a0in GCSE Maths, Grade 5 in English Language and Grade 6 or above\u00a0in GCSE Biology or a 6-6 in Combined Science\n        Study Mode: Full Time\n        LearnAimRefTitle: GCE A Level in Biology\n        "
+        },
+        {
+            "COURSE_NAME": "GCSE Biology AQA",
+            "DATA_SOURCE": "NCS",
+            "DISTANCE": 0.0,
+            "ID": "Doc_77727",
+            "POSTCODE": "S70 2AX",
+            "PROVIDER_NAME": "BARNSLEY COLLEGE",
+            "RELEVANCY": 0.024126240983605385,
+            "START_DATE": "2024-09-02T00:00:00Z",
+            "WHO_THIS_COURSE_IS_FOR": "\n        Course: GCSE Biology AQA\n        Provider: BARNSLEY COLLEGE\n        Provider type: NCS\n        Start Date: 2024-09-02T00:00:00Z\n        Distance: 0.0\n        Who is this course for? : GCSE Biology gives students the chance to gain a good understanding of Human Biology, Organisms, Evolution and the Environment. You will learn in the science laboratories with experienced and enthusiastic tutors. The specification integrates the principles of \u2018Working Scientifically\u2019 throughout the topics in required practical's. The course gives students the context of how science is applied in the outside world by real scientists. The course is aimed at any age group as education is ageless.\n        Location: Barnsley\n        Course type: nan\n        Sector: nan\n        Entry Requirements: You need to have English at grade D or above, maths at grade D_x000D_\nEquivalent qualifications or experience accepted_x000D_\nFunctional Skills level 2 accepted_x000D_\nSuccessfully complete an interview with Course tutor\n        Study Mode: Part Time\n        LearnAimRefTitle: GCSE (9-1) in Biology\n        "
+        },
+        {
+            "COURSE_NAME": "GCE A-Level in Biology",
+            "DATA_SOURCE": "NCS",
+            "DISTANCE": 0.0012,
+            "ID": "Doc_63263",
+            "POSTCODE": "S35 9ZX",
+            "PROVIDER_NAME": "CHAPELTOWN ACADEMY",
+            "RELEVANCY": 0.02395126409828663,
+            "START_DATE": "2024-09-01T00:00:00Z",
+            "WHO_THIS_COURSE_IS_FOR": "\n        Course: GCE A-Level in Biology\n        Provider: CHAPELTOWN ACADEMY\n        Provider type: NCS\n        Start Date: 2024-09-01T00:00:00Z\n        Distance: 0.0012\n        Who is this course for? : A-level Biology is a challenging, rewarding course that will help you to develop skills and knowledge necessary for a successful career. _x000D_\n_x000D_\nBiology involves the study of a wide range of exciting topics ranging from molecular biology to the study of ecosystems and from microorganisms to fin whales. Biology is never far from the headlines either_x000D_\n_x000D_\nThe human genome has been sequenced and we know the complete arrangement of the three thousand million bases that make up human DNA. In Kenya, roughly 4% of the population are living with AIDS and in South East Asia the skies are dark with smoke as the last Bornean rainforests are burned to grow oil palms._x000D_\n_x000D_\nBiologists are concerned with all these issues. They work in the fields of cell biology, medicine, food production and ecology._x000D_\n_x000D_\nThe work they do is vital to us all.\n        Location: Sheffield\n        Course type: nan\n        Sector: nan\n        Entry Requirements: The Academy\u2019s general entry criteria of a minimum of five 4s at GCSE applies, including English Language. A minimum of 5 in Biology GCSE (or two grade 5s if you have done double award science at GCSE) and a grade 5 in Maths, is needed to study Biology at A Level.\n        Study Mode: Full Time\n        LearnAimRefTitle: GCE A Level in Biology\n        "
+        },
+        {
+            "COURSE_NAME": "Level 2 Certificate in Supporting Teaching and Learning in Schools (part-time evening)",
+            "DATA_SOURCE": "NCS",
+            "DISTANCE": 0.0,
+            "ID": "Doc_70973",
+            "POSTCODE": "S41 7NG",
+            "PROVIDER_NAME": "CHESTERFIELD COLLEGE",
+            "RELEVANCY": 0.02381591871380806,
+            "START_DATE": "2025-09-12T00:00:00Z",
+            "WHO_THIS_COURSE_IS_FOR": "\n        Course: Level 2 Certificate in Supporting Teaching and Learning in Schools (part-time evening)\n        Provider: CHESTERFIELD COLLEGE\n        Provider type: NCS\n        Start Date: 2025-09-12T00:00:00Z\n        Distance: 0.0\n        Who is this course for? : Adult Learners\n        Location: CHESTERFIELD\n        Course type: nan\n        Sector: nan\n        Entry Requirements: To undertake this course you will need to secure a voluntary placement in a school setting (if not employed) for at least 1 day a week. Settings can include primary schools (infant and junior), secondary schools and special schools\ufffd. 2 references, an enhanced DBS (can be purchased through college if necessary) and a completion of a taster assignment will also be required.\n        Study Mode: Part Time\n        LearnAimRefTitle: Certificate in Supporting Teaching and Learning\n        "
+        },
+        {
+            "COURSE_NAME": "L1 Diploma in Carpentry and Joinery PT",
+            "DATA_SOURCE": "NCS",
+            "DISTANCE": 0.0,
+            "ID": "Doc_58952",
+            "POSTCODE": "S41 7NG",
+            "PROVIDER_NAME": "CHESTERFIELD COLLEGE",
+            "RELEVANCY": 0.02186664007604122,
+            "START_DATE": "2025-09-09T00:00:00Z",
+            "WHO_THIS_COURSE_IS_FOR": "\n        Course: L1 Diploma in Carpentry and Joinery PT\n        Provider: CHESTERFIELD COLLEGE\n        Provider type: NCS\n        Start Date: 2025-09-09T00:00:00Z\n        Distance: 0.0\n        Who is this course for? : Adult Learners\n        Location: CHESTERFIELD\n        Course type: nan\n        Sector: nan\n        Entry Requirements: Grade 3 in maths and English\n        Study Mode: Part Time\n        LearnAimRefTitle: Diploma in Carpentry and Joinery (QCF)\n        "
+        },
+        {
+            "COURSE_NAME": "ESOL  based in Nottingham",
+            "DATA_SOURCE": "NCS",
+            "DISTANCE": 0.0,
+            "ID": "Doc_55148",
+            "POSTCODE": "S41 7NG",
+            "PROVIDER_NAME": "CHESTERFIELD COLLEGE",
+            "RELEVANCY": 0.021739130839705467,
+            "START_DATE": "2025-09-09T00:00:00Z",
+            "WHO_THIS_COURSE_IS_FOR": "\n        Course: ESOL  based in Nottingham\n        Provider: CHESTERFIELD COLLEGE\n        Provider type: NCS\n        Start Date: 2025-09-09T00:00:00Z\n        Distance: 0.0\n        Who is this course for? : Adult Learners\n        Location: CHESTERFIELD\n        Course type: nan\n        Sector: nan\n        Entry Requirements: You must have the right to remain in the UK (Biometric Residency Card, Pre-Settled/Settled Scheme, Asylum Seekers, Refugees, or any other type of visas).\n        Study Mode: Part Time\n        LearnAimRefTitle: Generic code to identify ILR programme aims\n        "
+        },
+        {
+            "COURSE_NAME": "VTCT (ITEC) Level 4 Certificate in Skin Needling",
+            "DATA_SOURCE": "NCS",
+            "DISTANCE": 0.0,
+            "ID": "Doc_61715",
+            "POSTCODE": "S41 7NG",
+            "PROVIDER_NAME": "CHESTERFIELD COLLEGE",
+            "RELEVANCY": 0.02142857201397419,
+            "START_DATE": "2025-01-27T00:00:00Z",
+            "WHO_THIS_COURSE_IS_FOR": "\n        Course: VTCT (ITEC) Level 4 Certificate in Skin Needling\n        Provider: CHESTERFIELD COLLEGE\n        Provider type: NCS\n        Start Date: 2025-01-27T00:00:00Z\n        Distance: 0.0\n        Who is this course for? : Adult Learners\n        Location: CHESTERFIELD\n        Course type: nan\n        Sector: nan\n        Entry Requirements: Entry requirements At a minimum, learners are required to hold either the VTCT Level 2 Award in Facial Massage and Skin Care or VTCT (ITEC) Level 2 Certificate in Facial Skincare (or equivalent) and a qualification in level 3 Anatomy and Physiology.\n        Study Mode: Part Time\n        LearnAimRefTitle: Certificate in Skin Needling\n        "
+        },
+        {
+            "COURSE_NAME": "Level 2 GCSE in Biology",
+            "DATA_SOURCE": "NCS",
+            "DISTANCE": 0.0,
+            "ID": "Doc_71081",
+            "POSTCODE": "S41 7NG",
+            "PROVIDER_NAME": "CHESTERFIELD COLLEGE",
+            "RELEVANCY": 0.0211267601698637,
+            "START_DATE": "2025-09-09T00:00:00Z",
+            "WHO_THIS_COURSE_IS_FOR": "\n        Course: Level 2 GCSE in Biology\n        Provider: CHESTERFIELD COLLEGE\n        Provider type: NCS\n        Start Date: 2025-09-09T00:00:00Z\n        Distance: 0.0\n        Who is this course for? : Adult Learners\n        Location: CHESTERFIELD\n        Course type: nan\n        Sector: nan\n        Entry Requirements: The course is aimed at anyone who has a keen interest in the three science subjects and who has achieved a GCSE Science grade D/3, or equivalent, previously.\n        Study Mode: Full Time\n        LearnAimRefTitle: GCSE (9-1) in Biology\n        "
+        },
+        {
+            "COURSE_NAME": "CIPD Level 5 Associate Diploma in Human Resource Management (part-time)",
+            "DATA_SOURCE": "NCS",
+            "DISTANCE": 0.0,
+            "ID": "Doc_77794",
+            "POSTCODE": "S41 7NG",
+            "PROVIDER_NAME": "CHESTERFIELD COLLEGE",
+            "RELEVANCY": 0.02083333395421505,
+            "START_DATE": "2025-06-03T00:00:00Z",
+            "WHO_THIS_COURSE_IS_FOR": "\n        Course: CIPD Level 5 Associate Diploma in Human Resource Management (part-time)\n        Provider: CHESTERFIELD COLLEGE\n        Provider type: NCS\n        Start Date: 2025-06-03T00:00:00Z\n        Distance: 0.0\n        Who is this course for? : Adult Learners\n        Location: CHESTERFIELD\n        Course type: nan\n        Sector: nan\n        Entry Requirements:  _x000D_\nThis course is suited to individuals who are working in a people practice role and wish to contribute their knowledge and skills to help shape organisational value, or are working towards or working in a people manager role (including a line management role outside of HR)._x000D_\n \n        Study Mode: Part Time\n        LearnAimRefTitle: Associate Diploma in People Management\n        "
+        },
+        {
+            "COURSE_NAME": "L2 Technical Certificate in Hairdressing FT",
+            "DATA_SOURCE": "NCS",
+            "DISTANCE": 0.0,
+            "ID": "Doc_90781",
+            "POSTCODE": "S41 7NG",
+            "PROVIDER_NAME": "CHESTERFIELD COLLEGE",
+            "RELEVANCY": 0.020270271226763725,
+            "START_DATE": "2025-09-09T00:00:00Z",
+            "WHO_THIS_COURSE_IS_FOR": "\n        Course: L2 Technical Certificate in Hairdressing FT\n        Provider: CHESTERFIELD COLLEGE\n        Provider type: NCS\n        Start Date: 2025-09-09T00:00:00Z\n        Distance: 0.0\n        Who is this course for? : Adult Learners\n        Location: CHESTERFIELD\n        Course type: nan\n        Sector: nan\n        Entry Requirements: A keen interest in the hairdressing industry.\n        Study Mode: Part Time\n        LearnAimRefTitle: Technical Certificate in Hairdressing\n        "
+        },
+        {
+            "COURSE_NAME": "L2 NVQ Diploma in Beauty Therapy General PT",
+            "DATA_SOURCE": "NCS",
+            "DISTANCE": 0.0,
+            "ID": "Doc_79257",
+            "POSTCODE": "S41 7NG",
+            "PROVIDER_NAME": "CHESTERFIELD COLLEGE",
+            "RELEVANCY": 0.019999999552965164,
+            "START_DATE": "2025-09-09T00:00:00Z",
+            "WHO_THIS_COURSE_IS_FOR": "\n        Course: L2 NVQ Diploma in Beauty Therapy General PT\n        Provider: CHESTERFIELD COLLEGE\n        Provider type: NCS\n        Start Date: 2025-09-09T00:00:00Z\n        Distance: 0.0\n        Who is this course for? : Adult Learners\n        Location: CHESTERFIELD\n        Course type: nan\n        Sector: nan\n        Entry Requirements: You must have a keen interest in the beauty therapy industry.\n        Study Mode: Part Time\n        LearnAimRefTitle: NVQ Diploma in Beauty Therapy General\n        "
+        },
+        {
+            "COURSE_NAME": "L4 Diploma in Professional Accounting PT",
+            "DATA_SOURCE": "NCS",
+            "DISTANCE": 0.0,
+            "ID": "Doc_59110",
+            "POSTCODE": "S41 7NG",
+            "PROVIDER_NAME": "CHESTERFIELD COLLEGE",
+            "RELEVANCY": 0.019736841320991516,
+            "START_DATE": "2025-09-09T00:00:00Z",
+            "WHO_THIS_COURSE_IS_FOR": "\n        Course: L4 Diploma in Professional Accounting PT\n        Provider: CHESTERFIELD COLLEGE\n        Provider type: NCS\n        Start Date: 2025-09-09T00:00:00Z\n        Distance: 0.0\n        Who is this course for? : Adult Learners\n        Location: CHESTERFIELD\n        Course type: nan\n        Sector: nan\n        Entry Requirements: You will need a Level 3 AAT qualification, significant finance and accounting work experience and GCSE grade A-C/9-4 in English and maths.\n        Study Mode: Part Time\n        LearnAimRefTitle: Diploma in Professional Accounting\n        "
+        },
+        {
+            "COURSE_NAME": "AEB FS C&G  MATHS FOR ADULTS ENTRY PT",
+            "DATA_SOURCE": "NCS",
+            "DISTANCE": 0.0,
+            "ID": "Doc_77150",
+            "POSTCODE": "S41 7NG",
+            "PROVIDER_NAME": "CHESTERFIELD COLLEGE",
+            "RELEVANCY": 0.019480518996715546,
+            "START_DATE": "2025-09-09T00:00:00Z",
+            "WHO_THIS_COURSE_IS_FOR": "\n        Course: AEB FS C&G  MATHS FOR ADULTS ENTRY PT\n        Provider: CHESTERFIELD COLLEGE\n        Provider type: NCS\n        Start Date: 2025-09-09T00:00:00Z\n        Distance: 0.0\n        Who is this course for? : Adult Learners\n        Location: CHESTERFIELD\n        Course type: nan\n        Sector: nan\n        Entry Requirements: There are no entry requirements for this course however you will need to undertake an initial assessment to ascertain your current level of maths skills.\n        Study Mode: Part Time\n        LearnAimRefTitle: Generic code to identify ILR programme aims\n        "
+        },
+        {
+            "COURSE_NAME": "Functional Skills: Maths",
+            "DATA_SOURCE": "NCS",
+            "DISTANCE": 0.0,
+            "ID": "Doc_80408",
+            "POSTCODE": "S41 7NG",
+            "PROVIDER_NAME": "CHESTERFIELD COLLEGE",
+            "RELEVANCY": 0.01923076994717121,
+            "START_DATE": "2025-04-14T00:00:00Z",
+            "WHO_THIS_COURSE_IS_FOR": "\n        Course: Functional Skills: Maths\n        Provider: CHESTERFIELD COLLEGE\n        Provider type: NCS\n        Start Date: 2025-04-14T00:00:00Z\n        Distance: 0.0\n        Who is this course for? : Adult Learners\n        Location: CHESTERFIELD\n        Course type: nan\n        Sector: nan\n        Entry Requirements: There are no entry requirements for this course but you will be required to sit a short assessment and interview before you enrol to assess your level. You will then be enrolled on to that level. All ages accepted. Cost is free, dependent on funding conditions.\n        Study Mode: Part Time\n        LearnAimRefTitle: Generic code to identify ILR programme aims\n        "
+        }
+    ],
+    "RESPONSE": "OK"
+}
