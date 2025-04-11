@@ -1,0 +1,1137 @@
+{% extends "./layouts/_BASE.html" %}
+
+{% set withDescriptionAndLink = "true" %}
+{% set pageHeading = "Search results" %}
+{% set pageDescription = "Use the filters to explore these nearby courses." %}
+
+{% block content %}
+
+<script>
+  function showSelectedOptions(){
+
+      var distfilter=document.getElementById('distfilter');
+      var distfilter_selectedOption=dropdown1.options[dropdown1.selectedIndex].text
+
+      var sort_type=document.getElementById('sortfilter');
+      var sort_type_selected=sorttype.options[sorttype.selectedIndex].text
+
+      console.log("DISTANCE_FILTER OPT "+String(distfilter_selectedOption))
+      console.info("HELLO THERE RUNNING SELECTED OPTIONS")
+      document.getElementById('opt1').value=distfilter_selectedOption;
+      document.getElementById('opt1_attr').value=dropdown1.options[dropdown1.selectedIndex].value
+
+      document.getElementById('sort_opt').value=sort_type_selected;
+
+      //document.getElementById('opt1_attr').value=dropdown1.options[dropdown1.selectedIndex].value
+  }
+</script>
+<div class="govuk-grid-row"> 
+
+  <div class="govuk-grid-column-two-thirds">  
+
+     <!--Filter-->
+     <div class="filter-container">
+      <div class="filter-header">
+         <div class="filter-header-clear-all-link">
+            <span class="filter-text">Filter</span>
+         </div>
+         <div class="toggle-filter-icon-wrapper">
+            <div id="icon-container"></div>
+            <div class="govuk-link filter-toggle" onclick="toggleFilters()">Show filters</div>
+         </div>
+      </div>
+      <div class="filter-content" id="filterContent">
+      <!-- Phase of education -->
+         <div class="filter-section">
+            <h3>Entry requirements</h3>
+            <!-- <p>Select the education stage for your school</p> -->
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+               <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="phase-primary" name="phase" type="checkbox" value="primary">
+                  <label class="govuk-label govuk-checkboxes__label" for="phase-primary">
+                     No requirements
+                  </label>
+               </div>
+               <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="phase-secondary" name="phase" type="checkbox" value="secondary">
+                  <label class="govuk-label govuk-checkboxes__label" for="phase-secondary">
+                     GCSE passes in maths and English
+                  </label>
+               </div>
+            </div>
+            <button class="govuk-button apply-button-top-margin" onclick="applyFilters()">Apply filters</button>
+            <div id="clear-all-link" class="govuk-link clear-all-link" onclick="clearFilters()">Clear all</div>
+         </div>
+            <!-- Category -->
+            <div class="filter-section">
+               <h3>Type</h3>
+               <!-- <p>Choose your task category</p> -->
+               <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                     <input class="govuk-checkboxes__input" id="category-buildings" name="category" type="checkbox" value="buildings">
+                     <label class="govuk-label govuk-checkboxes__label" for="category-buildings">
+                       Academic courses (like A Levels)
+                     </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                     <input class="govuk-checkboxes__input" id="category-finance" name="category" type="checkbox" value="finance">
+                     <label class="govuk-label govuk-checkboxes__label" for="category-finance">
+                      Practical, skills-based courses (like T Levels, BTECs or City and Guilds)
+                     </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                     <input class="govuk-checkboxes__input" id="category-governance" name="category" type="checkbox" value="governance">
+                     <label class="govuk-label govuk-checkboxes__label" for="category-governance">
+                      Work-based apprenticeships
+                     </label>
+                  </div>
+               </div>
+            </div>
+
+            <div class="filter-section">
+               <h3>Keyword</h3>
+               <div class="govuk-form-group">
+                <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+              </div>
+            </div>
+      </div>
+   </div>
+
+   <div id="filter-results-container" class="filter-results-container">
+
+      <div id="filtered-count" class="govuk-body bold filtered-count"></div>
+
+      <div id="selected-filters" class="selected-filters" onclick="selectedFilters()"></div>
+   </div>
+
+    <p class="govuk-body govuk-!-margin-bottom-6">
+      <span class="govuk-!-font-weight-bold">Sort courses by:</span> 
+    <span class="govuk-!-margin-left-1 govuk-!-margin-right-1">
+      
+    <span class="">Distance</span>
+    </span>    
+     | 
+    <span class="govuk-!-margin-left-2 govuk-!-margin-right-1">
+        <a href="/records?sortOrder=lastName" class="govuk-link govuk-link--no-visited-state">Start date</a>
+    </span>
+    </p>
+    <!--
+    <div class="month-wrapper">
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          A Level Accounting <a data-categories="buildings" data-requirement="mandatory" data-phases="secondary" class="card-link" href="course-example" style="margin-right: 10px;"></a>
+        </h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action">
+            <a class="govuk-link" href="accounting-1">View course<span class="govuk-visually-hidden"> A Level Accounting</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Requirements
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Maths and English GCSE grade 4-9
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Distance
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>0.12 miles (Manchester)</p>
+              <p>Xaverian College</p>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Course type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <strong class="govuk-tag govuk-tag--orange" style="margin-bottom: 10px;">
+                A Level
+              </strong>
+                <details class="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      What is an A Level?
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                  <p>A levels are subject-based qualifications usually assessed by exams. You usually choose 3 subjects to study but you can take more or fewer.</p>
+                  <p>You typically study them full time over 2 years, after you've finished GCSEs.</p>
+                  </div>
+                </details>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Start date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              1 September 2025
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Duration
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2 years
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Action
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p><a href="">Save course to shortlist</a></p>
+                   <a href="dont-show-courses-like-this">Don't show courses like this</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    </div>
+    
+    <div class="month-wrapper">
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          A Level Ancient History <a data-categories="buildings" data-requirement="mandatory" data-phases="secondary" class="card-link" href="course-example" style="margin-right: 10px;"></a>
+        </h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action">
+            <a class="govuk-link" href="">View course<span class="govuk-visually-hidden"> A Level Accounting</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Requirements
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Maths and English GCSE grade 4-9
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Distance
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>0.12 miles (Manchester)</p>
+              <p>Xaverian College</p>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Course type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <strong class="govuk-tag govuk-tag--orange" style="margin-bottom: 10px;">
+                A Level
+              </strong>
+                <details class="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      What is an A Level?
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                  <p>A levels are subject-based qualifications usually assessed by exams. You usually choose 3 subjects to study but you can take more or fewer.</p>
+                  <p>You typically study them full time over 2 years, after you've finished GCSEs.</p>
+                  </div>
+                </details>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Start date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              1 September 2025
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Duration
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2 years
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Action
+            </dt>
+            <dd class="govuk-summary-list__value">
+             <p><a href="">Save course to shortlist</a></p>
+             <a href="dont-show-courses-like-this">Don't show courses like this</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    </div>
+
+    <div class="month-wrapper">
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          BTEC Applied Science <a data-categories="finance" data-requirement="mandatory" data-phases="secondary" class="card-link" href="course-example" style="margin-right: 10px;"></a>
+        </h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action">
+            <a class="govuk-link" href="biology-1">View course<span class="govuk-visually-hidden"> A Level Accounting</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Requirements
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Six passes at GCSE including two at grade 6 or above
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Distance
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>0.12 miles (Manchester)</p>
+              <p>Xaverian College</p>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Course type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <strong class="govuk-tag govuk-tag--turquoise" style="margin-bottom: 10px;">
+                BTEC
+              </strong>
+                <details class="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      What is a BTEC?
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                  <p>A BTEC, or Business and Technology Education Council qualification, is a work-related qualification that combines practical learning with theory.</p>
+                  <p>BTECs are an alternative to A-levels.</p>
+                  </div>
+                </details>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Start date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              1 September 2025
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Duration
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2 years
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Action
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p><a href="">Save course to shortlist</a></p>
+              <a href="dont-show-courses-like-this">Don't show courses like this</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    </div>
+
+    <div class="month-wrapper">
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          A Level Chemistry <a data-categories="buildings" data-requirement="mandatory" data-phases="secondary" class="card-link" href="course-example" style="margin-right: 10px;"></a>
+        </h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action">
+            <a class="govuk-link" href="biology-1">View course<span class="govuk-visually-hidden"> A Level Accounting</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Requirements
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Six good passes at GCSE including two at grade 6 or above
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Distance
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>0.12 miles (Manchester)</p>
+              <p>Xaverian College</p>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Course type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <strong class="govuk-tag govuk-tag--orange" style="margin-bottom: 10px;">
+                A Level
+              </strong>
+                <details class="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      What is an A Level?
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                  <p>A levels are subject-based qualifications usually assessed by exams. You usually choose 3 subjects to study but you can take more or fewer.</p>
+                  <p>You typically study them full time over 2 years, after you've finished GCSEs.</p>
+                  </div>
+                </details>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Start date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              1 September 2025
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Duration
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2 years
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Action
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p><a href="">Save course to shortlist</a></p>
+              <a href="dont-show-courses-like-this">Don't show courses like this</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="month-wrapper">
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">
+            Criminology Diploma Level 3 <a data-categories="finance" data-requirement="mandatory" data-phases="primary" class="card-link" href="course-example" style="margin-right: 10px;"></a> 
+          </h2>
+          <ul class="govuk-summary-card__actions">
+            <li class="govuk-summary-card__action">
+              <a class="govuk-link" href="biology-1">View course<span class="govuk-visually-hidden"> A Level Accounting</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Requirements
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Six passes at GCSE including two at grade 6 or above
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Distance
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p>0.12 miles (Manchester)</p>
+                <p>Xaverian College</p>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Diploma type
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <strong class="govuk-tag govuk-tag--purple" style="margin-bottom: 10px;">
+                  Level 3 Diploma
+                </strong>
+  
+                  <details class="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        What is a Level 3 Diploma?
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                     <p>Diplomas are technical or vocational courses that give you practical skills and experience.</p>
+  <p>Level 3 Diplomas (sometimes called BTECs) are equivalent to 2 A Levels.</p>
+                    </div>
+                  </details>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Start date
+              </dt>
+              <dd class="govuk-summary-list__value">
+                1 September 2025
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Duration
+              </dt>
+              <dd class="govuk-summary-list__value">
+                18 months
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Action
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p><a href="">Save course to shortlist</a></p>
+                <a href="dont-show-courses-like-this">Don't show courses like this</a>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="month-wrapper">
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          A Level Drama and Theatre <a data-categories="buildings" data-requirement="mandatory" data-phases="secondary" class="card-link" href="course-example" style="margin-right: 10px;"></a>
+        </h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action">
+            <a class="govuk-link" href="biology-1">View course<span class="govuk-visually-hidden"> A Level Accounting</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Requirements
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Six good passes at GCSE including two at grade 6 or above
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Distance
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>0.12 miles (Manchester)</p>
+              <p>Xaverian College</p>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Course type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <strong class="govuk-tag govuk-tag--orange" style="margin-bottom: 10px;">
+                A Level
+              </strong>
+                <details class="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      What is an A Level?
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                  <p>A levels are subject-based qualifications usually assessed by exams. You usually choose 3 subjects to study but you can take more or fewer.</p>
+                  <p>You typically study them full time over 2 years, after you've finished GCSEs.</p>
+                  </div>
+                </details>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Start date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              1 September 2025
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Duration
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2 years
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Action
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p><a href="">Save course to shortlist</a></p>
+              <a href="dont-show-courses-like-this">Don't show courses like this</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    </div>
+
+    <div class="month-wrapper">
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          A Level Economics <a data-categories="buildings" data-requirement="mandatory" data-phases="secondary" class="card-link" href="course-example" style="margin-right: 10px;"></a>
+        </h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action">
+            <a class="govuk-link" href="biology-1">View course<span class="govuk-visually-hidden"> A Level Accounting</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Requirements
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Six good passes at GCSE including two at grade 6 or above
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Distance
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>0.12 miles (Manchester)</p>
+              <p>Xaverian College</p>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Course type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <strong class="govuk-tag govuk-tag--orange" style="margin-bottom: 10px;">
+                A Level
+              </strong>
+                <details class="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      What is an A Level?
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                  <p>A levels are subject-based qualifications usually assessed by exams. You usually choose 3 subjects to study but you can take more or fewer.</p>
+                  <p>You typically study them full time over 2 years, after you've finished GCSEs.</p>
+                  </div>
+                </details>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Start date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              1 September 2025
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Duration
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2 years
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Action
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p><a href="">Save course to shortlist</a></p>
+              <a href="dont-show-courses-like-this">Don't show courses like this</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    </div>
+
+    <div class="month-wrapper">
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          A Level English Language/Literature <a data-categories="buildings" data-requirement="mandatory" data-phases="secondary" class="card-link" href="course-example" style="margin-right: 10px;"></a>
+        </h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action">
+            <a class="govuk-link" href="biology-1">View course<span class="govuk-visually-hidden"> A Level Accounting</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Requirements
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Six good passes at GCSE including two at grade 6 or above
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Distance
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>0.12 miles (Manchester)</p>
+              <p>Xaverian College</p>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Course type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <strong class="govuk-tag govuk-tag--orange" style="margin-bottom: 10px;">
+                A Level
+              </strong>
+                <details class="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      What is an A Level?
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                  <p>A levels are subject-based qualifications usually assessed by exams. You usually choose 3 subjects to study but you can take more or fewer.</p>
+                  <p>You typically study them full time over 2 years, after you've finished GCSEs.</p>
+                  </div>
+                </details>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Start date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              1 September 2025
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Duration
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2 years
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Action
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p><a href="">Save course to shortlist</a></p>
+              <a href="dont-show-courses-like-this">Don't show courses like this</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    </div>
+    
+    <div class="month-wrapper">
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          A Level Film Studies <a data-categories="buildings" data-requirement="mandatory" data-phases="secondary" class="card-link" href="course-example" style="margin-right: 10px;"></a>
+        </h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action">
+            <a class="govuk-link" href="biology-1">View course<span class="govuk-visually-hidden"> A Level Accounting</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Requirements
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Six good passes at GCSE including two at grade 6 or above
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Distance
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>0.12 miles (Manchester)</p>
+              <p>Xaverian College</p>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Course type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <strong class="govuk-tag govuk-tag--orange" style="margin-bottom: 10px;">
+                A Level
+              </strong>
+                <details class="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      What is an A Level?
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                  <p>A levels are subject-based qualifications usually assessed by exams. You usually choose 3 subjects to study but you can take more or fewer.</p>
+                  <p>You typically study them full time over 2 years, after you've finished GCSEs.</p>
+                  </div>
+                </details>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Start date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              1 September 2025
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Duration
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2 years
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Action
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p><a href="">Save course to shortlist</a></p>
+              <a href="dont-show-courses-like-this">Don't show courses like this</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    </div>
+
+    <div class="month-wrapper">
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+          A Level Fine Arts <a data-categories="buildings" data-requirement="mandatory" data-phases="secondary" class="card-link" href="course-example" style="margin-right: 10px;"></a>
+        </h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action">
+            <a class="govuk-link" href="biology-1">View course<span class="govuk-visually-hidden"> A Level Accounting</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Requirements
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Six good passes at GCSE including two at grade 6 or above
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Distance
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>0.12 miles (Manchester)</p>
+              <p>Xaverian College</p>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Course type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <strong class="govuk-tag govuk-tag--orange" style="margin-bottom: 10px;">
+                A Level
+              </strong>
+                <details class="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      What is an A Level?
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                  <p>A levels are subject-based qualifications usually assessed by exams. You usually choose 3 subjects to study but you can take more or fewer.</p>
+                  <p>You typically study them full time over 2 years, after you've finished GCSEs.</p>
+                  </div>
+                </details>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Start date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              1 September 2025
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Duration
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2 years
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Action
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p><a href="">Save course to shortlist</a></p>
+              <a href="dont-show-courses-like-this">Don't show courses like this</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    </div>
+  -->
+  
+  <div id="CONTAINER_BLOCK">
+    <div>
+        <label for="distfilter" class="govuk-label">Distance requirement:</label>
+        <select id="dropdown1" name="dropdown1" class="govuk-select">
+            <option value="L2">Less than 2 miles</option>
+            <option value="L5">Less than 5 miles</option>
+            <option value="L10">Less than 10 miles</option>
+            <option value="L15">Less than 15 miles</option>
+            <option value="L25">Less than 25 miles</option>
+            <option value="L50">Less than 50 miles</option>
+            <option value="ALL">All results</option>
+        </select>
+    </div>     
+    <div>
+        <label for="sortfilter" class="govuk-label">Sort:</label>
+        <select id="sorttype" name="sorttype" class="govuk-select">
+            <option value="relevance">Relevance</option>
+            <option value="distance">Distance</option>
+            <option value="distance">Diversity</option>
+            <option value="distance">Rerank</option>
+        </select>
+    </div>  
+    <form id="jsonForm">
+        <label for="userinput" class="govuk-label">Course, Opportunity or interest:</label>
+        <textarea type="text" id="userinput" name="userinput" title="userinput"  class="govuk-textarea" rows="2"  ></textarea><br><br>
+        <label for="location" class="govuk-label">Location:</label>
+        <input type="text" id="location" name="location" title="location" class="govuk-input"><br><br>
+        
+        <div class="form-group">
+            <label for="online_content" class="govuk-label">Include Online Content?</label><br>
+            <input type="checkbox" class="govuk-checkboxes" id="online_content" title="online_content" name="online_content" value="include online">
+       </div>
+       
+       <input type="hidden" id="opt1" name="opt1">
+       <input type="hidden" id="opt1_attr" name="opt1_attr">
+       <input type="hidden" id="sort_opt" name="sort_opt">
+       <button type="submit" class="btn btn-primary btn-custom govuk-button" onclick=submitForm()>Search</button>
+    </form>
+    
+      <div id ="custresponse"></div>
+      <div id="outputdiv_api"></div>
+      <script>
+        function submitForm() {
+            showSelectedOptions();
+            const form = document.getElementById('jsonForm');
+            const formData = new FormData(form);
+            const jsonData = {};
+    
+            formData.forEach((value, key) => {
+                jsonData[key] = value;
+            });
+            console.info("SUBMITTING HTTP REQUEST");
+            event.preventDefault();
+            fetch('/runVectorSearch_samepage', {            
+                //mode: 'no-cors',
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                    ,'Access-Control-Allow-Origin': 'http://127.0.0.1:3001'
+                    ,'Accept':'application/json'
+                    ,'Access-Control-Allow-Headers': ['origin','content-type','accept']
+                },
+                body: JSON.stringify(jsonData)
+            })
+            .then(response => {
+            if (!response.ok) {
+                console.error('NETWORK ERROR');
+                throw new Error('Network response was not ok');
+            }
+            console.log("RETURN");
+            return response.json();
+            })
+            .then(data => {
+              
+              console.info('GETTING DATA');
+              console.info(data);
+
+              
+              //console.info(response.data)
+              const responseDiv = document.getElementById("custresponse");
+              console.info('SETTING CUSTOM RESPONSE')
+              //responseDiv.innerHTML = `<p>${JSON.stringify(data, null, 2)}</p>`
+              const list_of_tables=document.getElementById('outputdiv_api');
+              
+              if(list_of_tables.children.length>0){
+                
+                  // clear previous results
+                  while (list_of_tables.firstChild){
+                            list_of_tables.removeChild(list_of_tables.lastChild);
+                };
+              }
+              let payload=data['PAYLOAD']
+              for (let itr=0; itr<payload.length;itr++){
+                    console.log(itr)
+                    var title=document.createTextNode('Course Name: '+payload[itr]['COURSE_NAME']);
+                    var coursetype=document.createTextNode('Course type: '+payload[itr]['COURSE_TYPE']);
+                    var distance=document.createTextNode('Distance: '+payload[itr]['DISTANCE']+' miles ('+payload[itr]['LOCATION_TOWN']+')');
+                    var description=document.createTextNode('Description: '+payload[itr]['WHO_THIS_COURSE_IS_FOR']);
+                    var duration=document.createTextNode('Course Duration: '+payload[itr]['DURATION']);
+                    var deliverymode=document.createTextNode('Delivery Mode: '+payload[itr]['DURATION']);
+                    var locationtown=document.createTextNode('Location: '+payload[itr]['LOCATION']);
+                    var requirements=document.createTextNode('Requirements: '+payload[itr]['SKILLS_REQUIRED']);
+                    var startdate=document.createTextNode('Start Date: '+payload[itr]['START_DATE'])
+                    let vartable=document.createElement('table');
+                    vartable.classList.add('govuk-table');
+                    let keys=[//'COURSE_NAME',
+                        'ENTRY_REQUIREMENTS',
+                        'COURSE_TYPE',
+                        'DELIVERY_MODE',
+                        'LEVEL',
+                        'DISTANCE',
+                        'LOCATION_TOWN',
+                        'EMPLOYER_NAME',
+                        'PROVIDER_NAME',
+                        'START_DATE',
+                        'WHO_THIS_COURSE_IS_FOR'
+                        ,'DURATION'
+                        ,'score'
+                    ];
+                    console.log("HELLO THERE");
+                    let hdr=vartable.createTHead();
+                    hdr.classList.add("govuk-table__head")
+                    let t1=document.createElement('th');
+                    t1.textContent=payload[itr]['COURSE_NAME'];
+                    t1.classList.add('govuk-table__header')
+                    console.log('COURSE '+payload[itr]['COURSE_NAME'])
+                    //console.log("GET ELEM 1");
+                    let t2=document.createElement('th');
+                    t2.classList.add('govuk-table__header')
+                    //t2.textContent=payload[itr]['WEBSITE']  
+                    //t2.textContent="TEST URL";
+                    var clink=document.createElement('a');
+                    clink.href=payload[itr]['WEBSITE'];
+                    clink.textContent='Link to course';
+                    //t2.innerHTML='<a href="'+url+'">Link to course</a>'
+                    
+                    t2.appendChild(clink);
+                    hdr.appendChild(t1);
+                    hdr.appendChild(t2);
+                    for (let i =0; i<keys.length;i++){
+                        let tr=vartable.insertRow();
+                        tr.classList.add("govuk-table__row");
+                        var name=keys[i];
+                        var value=payload[itr][keys[i]];
+                        let v0=tr.insertCell(0);
+                        v0.classList.add("govuk-table_cell");
+                        let b=document.createElement('bf');
+                        //th.classList.add("govuk-table__header")
+                        b.textContent=name;
+                        v0.appendChild(b);
+                        
+                        let v1=tr.insertCell(1);
+                        v1.textContent=value;
+                        v1.classList.add("govuk-table_cell");
+                    }
+                   
+                    
+                    list_of_tables.appendChild(vartable);
+                    list_of_tables.appendChild(document.createElement('br'));
+                    
+                } // end of for loop
+                
+            })
+            .catch(error => {
+            console.error('Error:', error);
+            const responseDiv = document.getElementById('outputdiv_api');
+            responseDiv.innerHTML = `<p style="color: red;">Custom Error: ${error.message}</p>`;
+            })
+        }                
+      </script>
+ </div>
+    
+
+{{ govukPagination({
+  next: {
+    href: "search-results-page-2"
+  },
+  items: [
+    {
+      number: 1,
+      current: true,
+      href: "#"
+    },
+    {
+      number: 2,
+      href: "search-results-page-2"
+    },
+    {
+      number: 3,
+      href: "search-results-page-3"
+    }
+  ]
+}) }}
+
+
+  </div>
+</div>
+
+{% endblock %}
