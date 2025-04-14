@@ -160,7 +160,7 @@ router.get('/LoadVectorSearch_NewPage',async(req,res) => {
         console.log(req.body);
 
         let userinput=decodeURIComponent(req.query.userinput);
-        let userlocation=decodeURIComponent(req.query.userinput);
+        let userlocation=decodeURIComponent(req.query.location);
         let cutoff_param='L25';
 
         let jsonData={};
@@ -204,5 +204,75 @@ router.get('/LoadVectorSearch_NewPage',async(req,res) => {
 
 }
 );
+router.post('/LoadVectorSearch_NewPage_ButtonClick',async(req,res) => {
+    // code to run the search from a landing page
+    console.log("LOAD NEW PAGE");
+    let template="./app//views/05/search-results-all-fromNodeJS_template.html";
+    
+    //let userinput="Cells and animals";
+    //let userlocation='Coventry';
+    //let cutoff_param='L25';
+    
+    //jsonData={
+    //    'userinput':userinput,
+    //    'location':userlocation,
+    //    'cutoff_param':cutoff_param
+    //};
 
+    
+
+    try { 
+        inputdata=req.body;
+        console.log("REQUEST");
+        //console.log(req);
+        
+        //console.log(`USER QUERY: ${decodeURIComponent(req.query.userinput)}`);
+        //console.log(`USER LOCATION: ${decodeURIComponent(req.query.location)}`);
+        console.log(req.body);
+
+        let userinput="Jobs: "+req.session.data['subject-1']+", Subjects: "+req.session.data['job-1'];
+        let userlocation=req.session.data['location-guided'];
+        let cutoff_param='L25';
+
+        let jsonData={};
+        jsonData['userinput']=userinput;
+        jsonData['location']=userlocation;
+        jsonData['cutoff_param']=cutoff_param;
+        console.log("Get JSON");
+        const url='http://127.0.0.1:5000/runvectorsearch';
+        fetch(url,{
+            method:'POST',
+            headers:{
+                'Content-Type': 'application/json'
+                ,'Access-Control-Allow-Origin': 'http://127.0.0.1:5000'
+                ,'Accept':'application/json'
+                ,'Access-Control-Allow-Headers': ['origin','content-type','accept']
+            },
+            body:JSON.stringify(jsonData)
+        }).then(
+            response=>{
+                if (!response.ok) {
+                    console.error('NETWORK ERROR');
+                    throw new Error('Network response was not ok');
+                }
+                console.log("RETURN");
+                return response.json();
+            }
+        ).then(
+            data=>{
+                console.log('GETTING DATA');
+                console.log(data['PAYLOAD']);
+                TableHTML=CreateTableHTML(data);
+                return res.render(template,{'HTML_TABLE':TableHTML});
+            }
+        )
+    }
+    catch{
+        console.log("CODE ERROR");
+    };
+
+    
+
+}
+);
 module.exports = router

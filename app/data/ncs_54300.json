@@ -151,5 +151,46 @@
         "SKILLS_REQUIRED": "Communication skills,Team working,Non judgemental,Patience",
         "STANDARD_NAME": "Early years practitioner",
         "DISTANCE":"3 miles"
-        }
+        },
+
+        {
+    
+            "id": "Doc_1001",
+            "COURSE_NAME": "Apprentice Early Years Practitioner - Acton Montessori Nursery And Preschool - W3 8GJ",
+            "PROVIDER_NAME": "EDEN TRAINING SOLUTIONS LIMITED",
+            "EMPLOYER_NAME": "V, D'S & EVERY KID'S DREAM NURSERIES LTD",
+            "LOCATION": "Unit 43, Alacia Court",
+            "START_DATE": "2025-01-10T00:00:00+00:00",
+            "WHO_THIS_COURSE_IS_FOR": "Following appropriate policies, procedures and systems ensuring the educational, social, physical, emotional, health and welfare needs of the children are always met.  To become involved in children&rsquo;s activities to stimulate and extend their learning.  To demonstrate sensitivity toward children and families within the facility.  Assisting in the admission and induction of new children.  Assisting in the maintenance of all necessary records to meet internal, E.Y.D.C.P and Ofsted requirements.  To take an active role in the promotion of excellent health and safety practices.  To respond effectively to any health and safety issues that may arise and report any necessary matters.  To participate in training and meetings as requested by the management team.  Performing any other duties commensurate with the general nature of the position requested by the management team..",
+            "LOCATION_TOWN": "London",
+            "POSTCODE": "W3 8GJ",
+            "COURSE_TYPE": "Intermediate Level Apprenticeship",
+            "SECTOR": "Health and Science",
+            "ENTRY_REQUIREMENTS": "qualificationType:GCSE or equivalent,subject:Maths & English,grade:C OR 4+,weighting:Desired",
+            "WEBSITE": "https://www.findapprenticeship.service.gov.uk/apprenticeship/VAC1000291060",
+            "LEARNING_DIRECT_CLASSIFICATION": "na",
+            "SKILLS_FOR_LIFE_DESC": "na",
+            "SSAT1": "na",
+            "SSAT2": "na",
+            "LEARNING_AIM_TITLE": "na",
+            "TOPIC_MODELING": "na",
+            "AWARDING_BODY": "na",
+            "LEVEL": "na",
+            "QUALIFICATION_TYPE": "na",
+            "DELIVERY_MODE": "na",
+            "STUDY_MODE": "na",
+            "ATTENDANCE_MODE": "na",
+            "DURATION": "na",
+            "COST": "na",
+            "EDUCATION_LEVEL": "Intermediate Level 2 (GCSE)",
+            "DATA_SOURCE": "Apprenticeships",
+            "APPLICATION_CLOSING_DATE": "2025-01-09 00:00:00",
+            "HOURS_PER_WEEK": "40.0",
+            "WAGE": "13312.000000 ",
+            "WAGE_UNIT": "Annually",
+            "SKILLS_REQUIRED": "Communication skills,Team working,Non judgemental,Patience",
+            "STANDARD_NAME": "Early years practitioner",
+            "DISTANCE":"3 miles"
+            },
+
 ]

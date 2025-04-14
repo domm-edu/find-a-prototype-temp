@@ -95,11 +95,14 @@ router.post('/results-type', function(request, response) {
         response.redirect("search-results-all")
     }
     else {
-        response.redirect("not-built-yet")
+        //response.redirect("not-built-yet")
+        ///LoadVectorSearch_NewPage_ButtonClick
+        request.redirect(308,'LoadVectorSearch_NewPage_ButtonClick');
+        //request.url='/LoadVectorSearch_NewPage_ButtonClick';
+        //next();
+
     }
-})
+});
 
 
-
-
-module.exports = router
+module.exports = router;
