@@ -54,12 +54,12 @@ router.post('/runVectorSearch_samepage',async(req,res) =>{
         inputdata=req.body;
         console.log(req.body);
 
-        let userinput="Cells and animals";
-        let userlocation='Coventry';
-        let cutoff_param='L25';
+        //let userinput="Cells and animals";
+        //let userLocation='Coventry';
+        //let cutoff_param='L25';
         //let jsonData={};
         //jsonData['userinput']=userinput;
-        //jsonData['location']=userlocation;
+        //jsonData['Location']=userLocation;
         //jsonData['cutoff_param']=cutoff_param;
         console.log("Get JSON");
         const url='http://127.0.0.1:5000/runvectorsearch';
@@ -99,28 +99,28 @@ function CreateTableHTML(API_OUTPUT_OBJECT={}){
   const data_obj=API_OUTPUT_OBJECT['PAYLOAD'];
   let keys_to_present=[
         //'COURSE_NAME',
-        'ENTRY_REQUIREMENTS',
-        'COURSE_TYPE',
-        'DELIVERY_MODE',
-        'LEVEL',
-        'DISTANCE',
-        'LOCATION_TOWN',
-        'EMPLOYER_NAME',
-        'PROVIDER_NAME',
-        'START_DATE',
-        'WHO_THIS_COURSE_IS_FOR'
-        ,'DURATION'
-        ,'score'    
+        'Entry requirements',
+        'Course type',
+        'Delivery mode',
+        'Level',
+        'Distance',
+        'Location town',
+        'Employer name',
+        'Provider name',
+        'Start date',
+        'Who this course is for'
+        ,'Duration'
+        ,'Score'    
   ];
   if(data_obj.length>0){
     big_html=`<br>`;
     html_spacing=`<br>`;
     for(let itr=0; itr<data_obj.length;itr++){
-        tablehtml=`<table>`;
-        tablehtml+=`<tr> <th>`+data_obj[itr]['COURSE_NAME']+`</th> <th><a href="`+data_obj[itr]['WEBSITE']+`">Link to course </a></th></tr></thead>`;
+        tablehtml=`<table class="govuk-table">`;
+        tablehtml+=`<thead class="govuk-table__head"> <th class="govuk-table__header">`+data_obj[itr]['Course name']+`</th> <th class="govuk-table__header"><a href="`+data_obj[itr]['Website']+`">Link to course </a></th></tr></thead>`;
         for (let idx =0;idx<keys_to_present.length;idx++){
             let key=keys_to_present[idx];
-            tablehtml+=`<tr><td>${key}</td><td>${data_obj[itr][key]}</td></td>`;            
+            tablehtml+=`<tr class="govuk-table__row"><td class="govuk-table__cell">${key}</td><td class="govuk-table__cell">${data_obj[itr][key]}</td></td>`;            
 
         };
         tablehtml+=`</table>`
@@ -139,12 +139,12 @@ router.get('/LoadVectorSearch_NewPage',async(req,res) => {
     let template="./app//views/05/search-results-all-fromNodeJS_template.html";
     
     //let userinput="Cells and animals";
-    //let userlocation='Coventry';
+    //let userLocation='Coventry';
     //let cutoff_param='L25';
     
     //jsonData={
     //    'userinput':userinput,
-    //    'location':userlocation,
+    //    'Location':userLocation,
     //    'cutoff_param':cutoff_param
     //};
 
@@ -156,16 +156,16 @@ router.get('/LoadVectorSearch_NewPage',async(req,res) => {
         //console.log(req);
         
         console.log(`USER QUERY: ${decodeURIComponent(req.query.userinput)}`);
-        console.log(`USER LOCATION: ${decodeURIComponent(req.query.location)}`);
+        console.log(`USER Location: ${decodeURIComponent(req.query.location)}`);
         console.log(req.body);
 
         let userinput=decodeURIComponent(req.query.userinput);
-        let userlocation=decodeURIComponent(req.query.location);
+        let userLocation=decodeURIComponent(req.query.location);
         let cutoff_param='L25';
 
         let jsonData={};
         jsonData['userinput']=userinput;
-        jsonData['location']=userlocation;
+        jsonData['location']=userLocation;
         jsonData['cutoff_param']=cutoff_param;
         console.log("Get JSON");
         const url='http://127.0.0.1:5000/runvectorsearch';
@@ -210,12 +210,12 @@ router.post('/LoadVectorSearch_NewPage_ButtonClick',async(req,res) => {
     let template="./app//views/05/search-results-all-fromNodeJS_template.html";
     
     //let userinput="Cells and animals";
-    //let userlocation='Coventry';
+    //let userLocation='Coventry';
     //let cutoff_param='L25';
     
     //jsonData={
     //    'userinput':userinput,
-    //    'location':userlocation,
+    //    'Location':userLocation,
     //    'cutoff_param':cutoff_param
     //};
 
@@ -227,16 +227,16 @@ router.post('/LoadVectorSearch_NewPage_ButtonClick',async(req,res) => {
         //console.log(req);
         
         //console.log(`USER QUERY: ${decodeURIComponent(req.query.userinput)}`);
-        //console.log(`USER LOCATION: ${decodeURIComponent(req.query.location)}`);
+        //console.log(`USER Location: ${decodeURIComponent(req.query.Location)}`);
         console.log(req.body);
 
         let userinput="Jobs: "+req.session.data['subject-1']+", Subjects: "+req.session.data['job-1'];
-        let userlocation=req.session.data['location-guided'];
-        let cutoff_param='L25';
+        let userLocation=req.session.data['location-guided'];
+        let cutoff_param=req.session.data['travel-location'];
 
         let jsonData={};
         jsonData['userinput']=userinput;
-        jsonData['location']=userlocation;
+        jsonData['location']=userLocation;
         jsonData['cutoff_param']=cutoff_param;
         console.log("Get JSON");
         const url='http://127.0.0.1:5000/runvectorsearch';

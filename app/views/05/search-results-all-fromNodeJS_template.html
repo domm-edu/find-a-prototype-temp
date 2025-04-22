@@ -15,7 +15,7 @@
       var sort_type=document.getElementById('sortfilter');
       var sort_type_selected=sorttype.options[sorttype.selectedIndex].text
 
-      console.log("DISTANCE_FILTER OPT "+String(distfilter_selectedOption))
+      console.log("Distance_FILTER OPT "+String(distfilter_selectedOption))
       console.info("HELLO THERE RUNNING SELECTED OPTIONS")
       document.getElementById('opt1').value=distfilter_selectedOption;
       document.getElementById('opt1_attr').value=dropdown1.options[dropdown1.selectedIndex].value
@@ -217,9 +217,9 @@
       <label for="sortfilter" class="govuk-label">Sort:</label>
       <select id="sorttype" name="sorttype" class="govuk-select">
           <option value="relevance">Relevance</option>
-          <option value="distance">Distance</option>
-          <option value="distance">Diversity</option>
-          <option value="distance">Rerank</option>
+          <option value="Distance">Distance</option>
+          <option value="Distance">Diversity</option>
+          <option value="Distance">Rerank</option>
       </select>
   </div>  
   <form id="jsonForm">
@@ -294,38 +294,38 @@
               let payload=data['PAYLOAD']
               for (let itr=0; itr<payload.length;itr++){
                     console.log(itr)
-                    var title=document.createTextNode('Course Name: '+payload[itr]['COURSE_NAME']);
-                    var coursetype=document.createTextNode('Course type: '+payload[itr]['COURSE_TYPE']);
-                    var distance=document.createTextNode('Distance: '+payload[itr]['DISTANCE']+' miles ('+payload[itr]['LOCATION_TOWN']+')');
-                    var description=document.createTextNode('Description: '+payload[itr]['WHO_THIS_COURSE_IS_FOR']);
-                    var duration=document.createTextNode('Course Duration: '+payload[itr]['DURATION']);
-                    var deliverymode=document.createTextNode('Delivery Mode: '+payload[itr]['DURATION']);
-                    var locationtown=document.createTextNode('Location: '+payload[itr]['LOCATION']);
-                    var requirements=document.createTextNode('Requirements: '+payload[itr]['SKILLS_REQUIRED']);
-                    var startdate=document.createTextNode('Start Date: '+payload[itr]['START_DATE'])
+                    var title=document.createTextNode('Course Name: '+payload[itr]['Course name']);
+                    var coursetype=document.createTextNode('Course type: '+payload[itr]['Course type']);
+                    var Distance=document.createTextNode('Distance: '+payload[itr]['Distance']+' miles ('+payload[itr]['Location town']+')');
+                    var description=document.createTextNode('Description: '+payload[itr]['Who this course is for']);
+                    var Duration=document.createTextNode('Course Duration: '+payload[itr]['Duration']);
+                    var deliverymode=document.createTextNode('Delivery Mode: '+payload[itr]['Delivery mode']);
+                    var Locationtown=document.createTextNode('Location: '+payload[itr]['Location']);
+                    var requirements=document.createTextNode('Requirements: '+payload[itr]['Skills required']);
+                    var startdate=document.createTextNode('Start Date: '+payload[itr]['Start date'])
                     let vartable=document.createElement('table');
                     vartable.classList.add('govuk-table');
-                    let keys=[//'COURSE_NAME',
-                        'ENTRY_REQUIREMENTS',
-                        'COURSE_TYPE',
-                        'DELIVERY_MODE',
-                        'LEVEL',
-                        'DISTANCE',
-                        'LOCATION_TOWN',
-                        'EMPLOYER_NAME',
-                        'PROVIDER_NAME',
-                        'START_DATE',
-                        'WHO_THIS_COURSE_IS_FOR'
-                        ,'DURATION'
-                        ,'score'
+                    let keys=[//'Course name',
+                        'Entry requirements',
+                        'Course type',
+                        'Delivery mode',
+                        'Levels',
+                        'Distance',
+                        'Location town',
+                        'Employer name',
+                        'Provider name',
+                        'Start date',
+                        'Who this course is for'
+                        ,'Duration'
+                        ,'Score'
                     ];
                     console.log("HELLO THERE");
                     let hdr=vartable.createTHead();
                     hdr.classList.add("govuk-table__head")
                     let t1=document.createElement('th');
-                    t1.textContent=payload[itr]['COURSE_NAME'];
+                    t1.textContent=payload[itr]['Course name'];
                     t1.classList.add('govuk-table__header')
-                    console.log('COURSE '+payload[itr]['COURSE_NAME'])
+                    console.log('COURSE '+payload[itr]['Course name'])
                     //console.log("GET ELEM 1");
                     let t2=document.createElement('th');
                     t2.classList.add('govuk-table__header')
