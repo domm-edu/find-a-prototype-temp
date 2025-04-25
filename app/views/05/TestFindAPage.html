@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+  <head>
+    <meta charset="utf-8" />
+    <title>Search Results - Department for Education</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://gov.uk/assets/govuk-frontend/govuk/all.css">
+    <script src="https://gov.uk/assets/govuk-frontend/govuk/all.js"></script>
+  </head>
+
+  <body class="govuk-template__body">
+    <script>
+      window.GOVUKFrontend.initAll()
+    </script>
+
+    <header class="govuk-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header__container govuk-width-container">
+        <div class="govuk-header__content">
+          <a href="#" class="govuk-header__link govuk-header__link--service-name">
+            Department for Education
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="govuk-phase-banner">
+      <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__tag">alpha</strong>
+        <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+        </span>
+      </p>
+    </div>
+
+    <main class="govuk-main-wrapper govuk-width-container" id="main-content" role="main">
+      <h1 class="govuk-heading-l">Search results</h1>
+      <p class="govuk-body">Use the filters to explore these nearby courses.</p>
+      <p class="govuk-body"><a class="govuk-link" href="#">Change your search</a></p>
+
+      <div class="govuk-accordion" data-module="govuk-accordion" id="filters">
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Show filters
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <form class="govuk-form-group">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="distance">Distance requirement</label>
+                <select class="govuk-select" id="distance" name="distance">
+                  <option value="25">Less than 25 miles</option>
+                </select>
+              </div>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="sort">Sort by</label>
+                <select class="govuk-select" id="sort" name="sort">
+                  <option value="relevance">Relevance</option>
+                </select>
+              </div>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="course">Course</label>
+                <input class="govuk-input" id="course" name="course" type="text" value="Maths">
+              </div>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="location">Location</label>
+                <input class="govuk-input" id="location" name="location" type="text" value="Durham">
+              </div>
+
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="online" name="online" type="checkbox" checked>
+                  <label class="govuk-label govuk-checkboxes__label" for="online">
+                    Include Online Content?
+                  </label>
+                </div>
+              </div>
+
+              <button type="submit" class="govuk-button">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-m">Certificate in Mathematical Studies</h2>
+      <p><a class="govuk-link" href="#">Link to course</a></p>
+
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">ENTRY_REQUIREMENTS</th>
+            <td class="govuk-table__cell">4-5 GCSEs at grade 4 (C) or above, including Maths at grade 5</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">COURSE_TYPE</th>
+            <td class="govuk-table__cell">nan</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">DELIVERY_MODE</th>
+            <td class="govuk-table__cell">Class Room Based</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">LEVEL</th>
+            <td class="govuk-table__cell">nan</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">DISTANCE</th>
+            <td class="govuk-table__cell">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>

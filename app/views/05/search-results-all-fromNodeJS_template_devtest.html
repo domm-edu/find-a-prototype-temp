@@ -185,7 +185,7 @@
     }
   </style>
 </head>
-
+<body class="govuk-template__body">
 <script>
   function showSelectedOptions(){
 
@@ -205,100 +205,15 @@
       //document.getElementById('opt1_attr').value=dropdown1.options[dropdown1.selectedIndex].value
   }
 </script>
+
 <div class="govuk-grid-row"> 
 
   <div class="govuk-grid-column-two-thirds">  
 
-     <!--Filter-->
-     <div class="filter-container">
-      <div class="filter-header">
-         <div class="filter-header-clear-all-link">
-            <span class="filter-text">Filter</span>
-         </div>
-         <div class="toggle-filter-icon-wrapper">
-            <div id="icon-container"></div>
-            <div class="govuk-link filter-toggle" onclick="toggleFilters()">Show filters</div>
-         </div>
-      </div>
-      <div class="filter-content" id="filterContent">
-      <!-- Phase of education -->
-         <div class="filter-section">
-            <h3>Entry requirements</h3>
-            <!-- <p>Select the education stage for your school</p> -->
-            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-               <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="phase-primary" name="phase" type="checkbox" value="primary">
-                  <label class="govuk-label govuk-checkboxes__label" for="phase-primary">
-                     No requirements
-                  </label>
-               </div>
-               <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="phase-secondary" name="phase" type="checkbox" value="secondary">
-                  <label class="govuk-label govuk-checkboxes__label" for="phase-secondary">
-                     GCSE passes in maths and English
-                  </label>
-               </div>
-            </div>
-            <button class="govuk-button apply-button-top-margin" onclick="applyFilters()">Apply filters</button>
-            <div id="clear-all-link" class="govuk-link clear-all-link" onclick="clearFilters()">Clear all</div>
-         </div>
-            <!-- Category -->
-            <div class="filter-section">
-               <h3>Type</h3>
-               <!-- <p>Choose your task category</p> -->
-               <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                     <input class="govuk-checkboxes__input" id="category-buildings" name="category" type="checkbox" value="buildings">
-                     <label class="govuk-label govuk-checkboxes__label" for="category-buildings">
-                       Academic courses (like A Levels)
-                     </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                     <input class="govuk-checkboxes__input" id="category-finance" name="category" type="checkbox" value="finance">
-                     <label class="govuk-label govuk-checkboxes__label" for="category-finance">
-                      Practical, skills-based courses (like T Levels, BTECs or City and Guilds)
-                     </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                     <input class="govuk-checkboxes__input" id="category-governance" name="category" type="checkbox" value="governance">
-                     <label class="govuk-label govuk-checkboxes__label" for="category-governance">
-                      Work-based apprenticeships
-                     </label>
-                  </div>
-               </div>
-            </div>
-
-            <div class="filter-section">
-               <h3>Keyword</h3>
-               <div class="govuk-form-group">
-                <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
-              </div>
-            </div>
-      </div>
-   </div>
-
-   <div id="filter-results-container" class="filter-results-container">
-
-      <div id="filtered-count" class="govuk-body bold filtered-count"></div>
-
-      <div id="selected-filters" class="selected-filters" onclick="selectedFilters()"></div>
-   </div>
-
-    <p class="govuk-body govuk-!-margin-bottom-6">
-      <span class="govuk-!-font-weight-bold">Sort courses by:</span> 
-    <span class="govuk-!-margin-left-1 govuk-!-margin-right-1">
-      
-    <span class="">Distance</span>
-    </span>    
-     | 
-    <span class="govuk-!-margin-left-2 govuk-!-margin-right-1">
-        <a href="/records?sortOrder=lastName" class="govuk-link govuk-link--no-visited-state">Start date</a>
-    </span>
-    </p>
-
+    
   
-  <div id="CONTAINER_BLOCK" class="container">
-    <div>
+  <div id="CONTAINER_BLOCK">
+    <div class="form-group">
       <label for="distfilter" class="govuk-label">Distance requirement:</label>
       <select id="dropdown1" name="dropdown1" class="govuk-select">
           <option value="L2">Less than 2 miles</option>
@@ -310,13 +225,13 @@
           <option value="ALL">All results</option>
       </select>
   </div>     
-  <div>
+  <div class="form-group">
       <label for="sortfilter" class="govuk-label">Sort:</label>
       <select id="sorttype" name="sorttype" class="govuk-select">
           <option value="relevance">Relevance</option>
           <option value="Distance">Distance</option>
-          <option value="Distance">Diversity</option>
-          <option value="Distance">Rerank</option>
+          <!--<option value="Diversity">Diversity</option>-->
+          <option value="Rerank">Rerank</option>
       </select>
   </div>  
   <form id="jsonForm">
@@ -494,5 +409,5 @@
 
   </div>
 </div>
-
+</body>
 {% endblock %}
